@@ -1,0 +1,139 @@
+// -----------------------------------------------------------------------------
+// This file contains all @keyframes of the site.
+// -----------------------------------------------------------------------------
+
+// Slide up
+// ==========================================================================
+
+// Used by texts.
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+// Slide up out
+// ==========================================================================
+
+// Used by "greeting".
+
+@keyframes slideUpOut {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+// Slide left
+// ==========================================================================
+
+// Used by project links.
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+// Slide down
+// ==========================================================================
+
+// Used by prelude.
+// Used by header nav.
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+// Slide down out
+// ==========================================================================
+
+// Used by prelude.
+
+@keyframes slideDownOut {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
+
+// Scaling with rotation
+// ==========================================================================
+
+// Used by project images.
+
+@keyframes scalingWithRotation {
+  from {
+    transform: scale(0) rotate(-90deg);
+  }
+
+  to {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+// Zero to full width
+// ==========================================================================
+
+// Used by the underline of "contact" heading.
+
+@keyframes zeroToFullWidth {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+// Prelude Animations
+// ==========================================================================
+
+@keyframes preludeAnimation {
+  from {
+    transform: translateY(-120px) rotateY(360deg) scale(0);
+  }
+
+  to {
+    transform: translateY(0) rotateY(0deg) scale(1);
+  }
+}
+
+// Swiper buttons
+// ==========================================================================
+
+@keyframes swiperBtnsAnimation {
+  from {
+    right: 40px;
+    letter-spacing: 20px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    letter-spacing: inherit;
+    opacity: 1;
+  }
+}

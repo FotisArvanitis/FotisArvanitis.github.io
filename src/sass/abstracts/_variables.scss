@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+@use "../base/fonts" as *;
+
+// Font variables
+// ==========================================================================
+
+$ff-name: Josefin Sans;
+$ff-base: Outfit;
+
+// Color variables
+// ==========================================================================
+
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
+
+// Breakpoint variables
+// ==========================================================================
+
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$xlarge: 1200px;
+$xxlarge: 1400px;
+
+// Container variables
+// ==========================================================================
+
+$container-min-width: 320px;
+$container-max-width: 1400px;
+
+// Box shadow variables
+// ==========================================================================
+
+$box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+
+// Z-index variables
+// ==========================================================================
+
+$zindex-dropdown: 1000;
+$zindex-sticky: 1020;
+$zindex-fixed: 1030;
+$zindex-offcanvas-backdrop: 1040;
+$zindex-offcanvas: 1045;
+$zindex-modal-backdrop: 1050;
+$zindex-modal: 1055;
+$zindex-popover: 1070;
+$zindex-tooltip: 1080;

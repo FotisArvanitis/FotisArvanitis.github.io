@@ -1,0 +1,165 @@
+// -----------------------------------------------------------------------------
+// This file contains all the styles related to the "Prelude" of the site.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts" as *;
+
+// Prelude
+// ==========================================================================
+
+.prelude {
+  display: none;
+  justify-content: center;
+  row-gap: 10px;
+
+  // Rules for medium screens and up.
+
+  @media (min-width: $medium) {
+    grid-template-columns: auto auto;
+    gap: 0 40px;
+  }
+
+  // Division.
+
+  div {
+    line-height: 1.2;
+
+    // First and second div.
+    // * First and last name.
+
+    &:first-of-type,
+    &:nth-of-type(2) {
+      display: flex;
+      font-family: $ff-name;
+      font-size: 38px;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      // Span.
+
+      span {
+        animation-name: preludeAnimation, slideDownOut;
+        animation-duration: 1.6s;
+        animation-timing-function: ease;
+        animation-fill-mode: backwards, forwards;
+
+        + span {
+          margin-left: 6px;
+        }
+      }
+
+      // Rules for small screens and up.
+
+      @media (min-width: 400px) {
+        font-size: 44px;
+      }
+    }
+
+    // Add animation delay to the first div spans ("First name").
+
+    &:first-of-type span {
+      &:first-of-type {
+        animation-delay: 0.3s, 4.5s;
+      }
+      &:nth-of-type(2) {
+        animation-delay: 0.5s, 4.5s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 0.7s, 4.5s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: 0.4s, 4.5s;
+      }
+      &:nth-of-type(5) {
+        animation-delay: 0.6s, 4.5s;
+      }
+    }
+
+    // Add animation delay to the second div spans ("Last name").
+
+    &:nth-of-type(2) span {
+      &:first-of-type {
+        animation-delay: 0.2s, 4.5s;
+      }
+      &:nth-of-type(2) {
+        animation-delay: 0.4s, 4.5s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 0.8s, 4.5s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: 0.1s, 4.5s;
+      }
+      &:nth-of-type(5) {
+        animation-delay: 0.5s, 4.5s;
+      }
+      &:nth-of-type(6) {
+        animation-delay: 0.3s, 4.5s;
+      }
+      &:nth-of-type(7) {
+        animation-delay: 0.7s, 4.5s;
+      }
+      &:nth-of-type(8) {
+        animation-delay: 0.9s, 4.5s;
+      }
+      &:nth-of-type(9) {
+        animation-delay: 0.6s, 4.5s;
+      }
+    }
+
+    // Third division ("Portfolio").
+
+    &:nth-of-type(3) {
+      overflow: hidden;
+      text-align: end;
+
+      // Paragraph.
+
+      p {
+        text-transform: uppercase;
+        animation-name: slideDown, slideDownOut;
+        animation-duration: 1.6s;
+        animation-timing-function: ease;
+        animation-delay: 2.5s, 4.5s;
+        animation-fill-mode: backwards, forwards;
+
+        @media (min-width: 400px) {
+          letter-spacing: 4px;
+        }
+      }
+
+      // Rules for medium screens and up.
+
+      @media (min-width: $medium) {
+        grid-area: 2 / 1 / 3 / 3;
+      }
+    }
+  }
+}
+
+// Greeting
+// ==========================================================================
+
+.greeting {
+  display: none;
+  overflow: hidden;
+
+  // Paragraph.
+
+  p {
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation-name: slideUp, slideUpOut;
+    animation-duration: 1.6s;
+    animation-timing-function: ease;
+    animation-delay: 0s, 2s;
+    animation-fill-mode: backwards, forwards;
+
+    // Rules for small screens and up.
+
+    @media (min-width: $small) {
+      font-size: 58px;
+    }
+  }
+}

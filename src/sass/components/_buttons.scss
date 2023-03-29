@@ -1,0 +1,146 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts" as *;
+@use "sass:math";
+
+// Button class
+// ==========================================================================
+
+.button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+}
+
+// Swiper buttons
+// ==========================================================================
+
+// Buttons.
+
+.swiper-button {
+  &-next,
+  &-prev {
+    flex-direction: column;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    line-height: 0.8;
+    overflow: hidden;
+    @include animation-std-style(both);
+
+    // Remove default pseudo-elements of Swiper buttons.
+
+    &::after {
+      display: none;
+    }
+
+    // Set position for small screen sizes.
+
+    @media (max-width: 399px) {
+      position: static;
+    }
+
+    // Set positioning properties for medium and large screen sizes.
+    // * Swiper buttons has position absolute by default.
+
+    @media (min-width: 400px) {
+      top: auto;
+      left: auto;
+      right: 0;
+    }
+
+    // Style the inner divs.
+
+    div {
+      display: flex;
+
+      // Set transition to each span.
+      // * For hover effect.
+
+      span {
+        transition: transform 0.4s ease;
+
+        @for $i from 2 through 8 {
+          &:nth-of-type(#{$i}) {
+            $unit: "s";
+            $value: math.div(($i - 1), 10) + $unit;
+            transition-delay: #{$value};
+          }
+        }
+      }
+    }
+  }
+
+  // Button next.
+
+  &-next {
+    height: 32px;
+    font-size: 39px;
+    font-weight: 700;
+
+    // Set margins for small screen sizes.
+
+    @media (max-width: 399px) {
+      margin-top: 50px;
+      margin-bottom: 15px;
+    }
+
+    // Set the bottom property for positioning,
+    // on medium and large screen sizes.
+
+    @media (min-width: 400px) {
+      bottom: 30px;
+    }
+
+    // Set margin to first div.
+
+    div:first-of-type {
+      margin-bottom: 32px;
+    }
+
+    // Set hover.
+
+    @media (hover: hover) {
+      &:hover div span {
+        transform: translateY(-64px);
+      }
+    }
+  }
+
+  // Button previous.
+
+  &-prev {
+    height: 16px;
+    font-size: 20px;
+
+    // Set the bottom property for positioning,
+    // on medium and large screen sizes.
+
+    @media (min-width: 400px) {
+      bottom: 0;
+    }
+
+    // Set margin to first div.
+
+    div:first-of-type {
+      margin-bottom: 16px;
+    }
+
+    // Set hover.
+
+    @media (hover: hover) {
+      &:hover div span {
+        transform: translateY(-32px);
+      }
+    }
+  }
+}

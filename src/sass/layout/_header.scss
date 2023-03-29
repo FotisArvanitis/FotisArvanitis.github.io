@@ -1,0 +1,173 @@
+// -----------------------------------------------------------------------------
+// This file contains all the styles related to the "Header" of the site.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts" as *;
+
+// Header
+// ==========================================================================
+
+header {
+  height: 44px;
+
+  // Container.
+
+  .container {
+    overflow: hidden;
+
+    // Nav tag.
+
+    nav {
+      animation-name: slideDown;
+      @include animation-std-style(backwards);
+    }
+  }
+}
+
+// Navigation bar
+// ==========================================================================
+
+.nav-bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 44px;
+
+  // Name
+
+  a {
+    font-family: $ff-name;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  // Menu toggler.
+
+  .menu-toggler {
+    padding: 0;
+
+    div {
+      height: 2px;
+      margin: 6px;
+      background-color: $black;
+
+      &:first-of-type {
+        width: 30px;
+      }
+
+      &:last-of-type {
+        width: 15px;
+        margin-left: auto;
+      }
+    }
+
+    @media (min-width: $small) {
+      display: none;
+    }
+  }
+
+  // Menu.
+
+  .menu {
+    // Show menu.
+
+    &.show {
+      right: 0;
+    }
+
+    // Unordered list.
+
+    ul {
+      @include reset-list;
+    }
+
+    // Button.
+
+    button {
+      padding: 0;
+
+      &.active {
+        font-weight: 700;
+      }
+    }
+
+    // Rules for extra small screens.
+
+    @media (max-width: 575px) {
+      display: grid;
+      place-items: center;
+      position: fixed;
+      top: 0;
+      right: calc(-100% + -30px);
+      width: 100%;
+      height: 100%;
+      z-index: $zindex-offcanvas;
+      background-color: $white;
+      box-shadow: $box-shadow;
+      transition: right 1.2s ease;
+
+      // List.
+
+      li {
+        + li:not(:last-of-type) {
+          margin-top: 8px;
+        }
+      }
+
+      // Button.
+
+      button {
+        font-size: 26px;
+        letter-spacing: 2px;
+
+        // Close menu button.
+
+        &.close-menu {
+          font-size: 18px;
+          margin-top: 40px;
+
+          &::before {
+            content: "";
+            display: block;
+            position: relative;
+            top: -20px;
+            width: 108px;
+            height: 2px;
+            background-color: $black;
+          }
+        }
+      }
+    }
+
+    // Rules for small screens and up.
+
+    @media (min-width: $small) {
+      // List.
+
+      li {
+        display: inline;
+
+        &:last-of-type {
+          display: none;
+        }
+
+        + li {
+          margin-left: 20px;
+        }
+      }
+
+      // Button.
+
+      button {
+        font-size: 18px;
+        line-height: 1;
+      }
+    }
+  }
+}

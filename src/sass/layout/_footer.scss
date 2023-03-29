@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// This file contains all the styles related to the "Footer" of the site.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts" as *;
+
+// Footer
+// ==========================================================================
+
+footer {
+  height: 39px;
+
+  // Container.
+
+  .container {
+    overflow: hidden;
+  }
+
+  // Paragraph.
+
+  p {
+    margin-bottom: 12px;
+    animation-name: slideUp;
+    @include animation-std-style(backwards);
+
+    &::first-letter {
+      font-size: 22px;
+      line-height: 1;
+      vertical-align: text-top;
+    }
+  }
+}

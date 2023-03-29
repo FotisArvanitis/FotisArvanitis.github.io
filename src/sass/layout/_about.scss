@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains all the styles related to the "About" section of the site.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts" as *;
+
+.about {
+  // Division.
+
+  > div {
+    overflow: hidden;
+  }
+
+  // Heading.
+
+  h1 {
+    max-width: 740px;
+    animation-name: slideUp;
+    @include animation-std-style(backwards);
+  }
+
+  // Paragraph.
+
+  p {
+    max-width: 930px;
+    font-size: 20px;
+    animation-name: slideUp;
+    @include animation-std-style(backwards);
+    animation-delay: 1.6s;
+  }
+}

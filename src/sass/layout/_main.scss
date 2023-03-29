@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// This file contains all the styles related to the "Main" section of the site.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts" as *;
+
+// Tab panels
+// ==========================================================================
+
+.tab-panel {
+  &:not(.active) {
+    display: none;
+  }
+
+  &.hide {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+}

@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations.
+// -----------------------------------------------------------------------------
+
+// Josefin Sans
+// ==========================================================================
+
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../assets/fonts/josefin-sans-v25-latin-700.woff2")
+    format("woff2");
+}
+
+// Outfit
+// ==========================================================================
+
+// Outfit regular.
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/outfit-v2-latin-regular.woff2") format("woff2");
+}
+
+// Outfit 700.
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../assets/fonts/outfit-v2-latin-700.woff2") format("woff2");
+}

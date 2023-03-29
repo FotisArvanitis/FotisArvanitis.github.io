@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// Lists
+// ==========================================================================
+
+// Reset-list keeps list items block level, just removes default browser
+// list-style, padding and margin.
+
+@mixin reset-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Animations
+// ==========================================================================
+
+// Animation standard styles.
+
+@mixin animation-std-style($fill-mode) {
+  animation-duration: 1.6s;
+  animation-timing-function: ease;
+  animation-fill-mode: $fill-mode;
+}

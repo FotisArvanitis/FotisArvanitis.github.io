@@ -1,0 +1,163 @@
+// -----------------------------------------------------------------------------
+// This file contains all the styles related to the "Work" section of the site.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts" as *;
+
+// Swiper slides
+// ==========================================================================
+
+.swiper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+// Slides.
+
+.swiper-slide {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px 40px;
+
+  @media (min-width: $xlarge) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  // Active slide.
+  // 1. For smoother transitions between slides.
+
+  &-active {
+    transition-delay: 0.4s; // 1
+
+    // Add animation to texts.
+
+    .description {
+      .project-type,
+      .project-title,
+      .project-commentary,
+      ul li div {
+        animation-name: slideUp;
+        @include animation-std-style(backwards);
+      }
+
+      // Add animation to project links.
+
+      > div > a {
+        animation-name: slideLeft;
+        @include animation-std-style(backwards);
+      }
+    }
+  }
+}
+
+// Project image
+// ==========================================================================
+
+.swiper-slide {
+  .project-image {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+
+    img {
+      width: 100%;
+      max-width: 480px;
+      box-shadow: $box-shadow;
+    }
+  }
+
+  &-active {
+    .project-image img {
+      animation-name: scalingWithRotation;
+      @include animation-std-style(backwards);
+    }
+  }
+}
+
+// Project description
+// ==========================================================================
+
+.description {
+  > div,
+  ul li {
+    width: fit-content;
+    overflow: hidden;
+  }
+
+  // Project type.
+
+  .project-type {
+    font-size: 16px;
+  }
+
+  // Project title.
+
+  .project-title {
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  // Project commentary.
+
+  .project-commentary {
+    max-width: 740px;
+  }
+
+  // Strong project commentary.
+
+  strong.project-commentary {
+    margin-top: 25px;
+    display: block;
+    font-size: 16px;
+  }
+
+  // Project process.
+
+  ul {
+    @include reset-list;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    li {
+      text-transform: capitalize;
+
+      + li {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  // Project link.
+
+  a {
+    position: relative;
+    overflow: hidden;
+    color: $white;
+    background-color: currentColor;
+    border-color: $black;
+    font-size: 16px;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: $black;
+      transition: 0.4s ease;
+    }
+
+    @media (hover: hover) {
+      &:hover::before {
+        transform: translateY(100%);
+      }
+    }
+
+    span {
+      mix-blend-mode: difference;
+    }
+  }
+}

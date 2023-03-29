@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Fotis Arvanitis Portfolio" />
+    <meta name="author" content="Fotis Arvanitis" />
+    <title>Fotis Arvanitis</title>
+    <link rel="canonical" href="https://fotisarvanitis.github.io/" />
+    <!-- Fonts -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./src/assets/fonts/josefin-sans-v25-latin-700.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./src/assets/fonts/outfit-v2-latin-regular.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./src/assets/fonts/outfit-v2-latin-700.woff2"
+      crossorigin
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8.3.0/swiper-bundle.min.css"
+      integrity="sha256-3ljH34DRkZM23Eiz7a2+cC7i5aeSUyOY8FJrGeZ1S/g="
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/dist/css/main.css" />
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./src/assets/images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/assets/images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./src/assets/images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./src/assets/images/favicons/site.webmanifest" />
+    <!-- Twitter Cards Markup -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@arvanitis_fotis" />
+    <meta name="twitter:creator" content="@arvanitis_fotis" />
+    <meta name="twitter:title" content="Fotis Arvanitis Portfolio" />
+    <meta
+      name="twitter:image"
+      content="https://fotisarvanitis.github.io/src/assets/images/portfolio-social.png"
+    />
+    <!-- Open Graph Markup -->
+    <meta property="og:url" content="https://fotisarvanitis.github.io/" />
+    <meta property="og:title" content="Fotis Arvanitis Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://fotisarvanitis.github.io/src/assets/images/portfolio-social.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1000" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <!-- Navigation bar -->
+        <nav class="nav-bar" style="display: none">
+          <!-- Name -->
+          <a href="/">Fotis Arvanitis</a>
+          <!-- Menu toggler button -->
+          <button type="button" class="button menu-toggler">
+            <div></div>
+            <div></div>
+          </button>
+          <!-- Menu -->
+          <div class="menu">
+            <ul>
+              <!-- About button -->
+              <li>
+                <button type="button" class="button" data-target="#about-tab">
+                  About
+                </button>
+              </li>
+              <!-- Work button -->
+              <li>
+                <button type="button" class="button" data-target="#work-tab">
+                  Work
+                </button>
+              </li>
+              <!-- Contact button -->
+              <li>
+                <button type="button" class="button" data-target="#contact-tab">
+                  Contact
+                </button>
+              </li>
+              <!-- Close menu button -->
+              <li>
+                <button type="button" class="button close-menu">Close</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Main -->
+    <main>
+      <div class="container">
+        <!-- Prelude -->
+        <div class="prelude">
+          <!-- First name -->
+          <div>
+            <span>f</span>
+            <span>o</span>
+            <span>t</span>
+            <span>i</span>
+            <span>s</span>
+          </div>
+          <!-- Last name -->
+          <div>
+            <span>a</span>
+            <span>r</span>
+            <span>v</span>
+            <span>a</span>
+            <span>n</span>
+            <span>i</span>
+            <span>t</span>
+            <span>i</span>
+            <span>s</span>
+          </div>
+          <!-- Portfolio -->
+          <div>
+            <p>portfolio</p>
+          </div>
+        </div>
+        <!-- Greeting -->
+        <div class="greeting">
+          <p>Hello!</p>
+        </div>
+        <!-- About -->
+        <div class="tab-panel about" id="about-tab">
+          <!-- Heading -->
+          <div class="mb-40">
+            <h1>
+              I'm Fotis Arvanitis, a passionate <b>UI</b>&<b>UX designer</b>.
+            </h1>
+          </div>
+          <!-- Paragraph -->
+          <div>
+            <p>
+              My purpose is to focus at the heart of every project, collecting
+              all the characteristics, elements and needs for creating visual
+              designs thats suits and perform its purpose. Always designing in a
+              user and developer friendly direction.
+            </p>
+          </div>
+        </div>
+        <!-- Work -->
+        <div class="tab-panel" id="work-tab">
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <!-- Image -->
+                <div class="project-image">
+                  <img
+                    src="./src/assets/images/crossfit-project-img.jpg"
+                    alt="crossfit-project-image"
+                    data-tilt
+                  />
+                </div>
+                <!-- Description -->
+                <div class="description">
+                  <!-- Project type -->
+                  <div>
+                    <p class="project-type">Personal project</p>
+                  </div>
+                  <!-- Project title -->
+                  <div>
+                    <p class="project-title">Crossfit training center</p>
+                  </div>
+                  <!-- Project commentary -->
+                  <div>
+                    <p class="project-commentary">
+                      A website from my personal collection of projects, related
+                      to the online presence of a crossfit gym. Created for
+                      practice and improvement in design and programming.
+                    </p>
+                  </div>
+                  <!-- Process -->
+                  <ul>
+                    <li><div>Research</div></li>
+                    <li><div>UI / UX design</div></li>
+                    <li><div>Logo design</div></li>
+                    <li><div>Illustrations</div></li>
+                    <li><div>Photo editing</div></li>
+                    <li><div>Development</div></li>
+                  </ul>
+                  <!-- Project Link -->
+                  <div>
+                    <a
+                      href="/crossfit-training-center"
+                      target="_blank"
+                      class="button"
+                      ><span>View</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <!-- Image -->
+                <div class="project-image">
+                  <img
+                    src="./src/assets/images/detecto-project-img.jpg"
+                    alt="detecto-project-image"
+                    data-tilt
+                  />
+                </div>
+                <!-- Description -->
+                <div class="description">
+                  <!-- Project type -->
+                  <div>
+                    <p class="project-type">Commercial project</p>
+                  </div>
+                  <!-- Project title -->
+                  <div>
+                    <p class="project-title">Detecto</p>
+                  </div>
+                  <!-- Project commentary -->
+                  <div>
+                    <p class="project-commentary">
+                      A landing page created for a new company that offers
+                      financial services. The goal in this case was to create a
+                      clean, modern design for product presentation and
+                      promotion.
+                    </p>
+                  </div>
+                  <!-- Strong project commentary -->
+                  <div>
+                    <strong class="project-commentary">
+                      * Company information such as brand logo and texts have
+                      been replaced.
+                    </strong>
+                  </div>
+                  <!-- Process -->
+                  <ul>
+                    <li><div>Research</div></li>
+                    <li><div>UI / UX design</div></li>
+                    <li><div>Logo design</div></li>
+                    <li><div>Illustrations</div></li>
+                    <li><div>Development</div></li>
+                  </ul>
+                  <!-- Project Link -->
+                  <div>
+                    <a href="/detecto" target="_blank" class="button"
+                      ><span>View</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <!-- Image -->
+                <div class="project-image">
+                  <img
+                    src="./src/assets/images/macramfrenia-project-img.jpg"
+                    alt="macramfrenia-project-image"
+                    data-tilt
+                  />
+                </div>
+                <!-- Description -->
+                <div class="description">
+                  <!-- Project type -->
+                  <div>
+                    <p class="project-type">Commercial project</p>
+                  </div>
+                  <!-- Project title -->
+                  <div>
+                    <p class="project-title">Macram&shy;frenia</p>
+                  </div>
+                  <!-- Project commentary -->
+                  <div>
+                    <p class="project-commentary">
+                      The concept behind Macramfrenia was to create the entire
+                      brand from scratch. First the brand needed a logo and then
+                      an online catalog to showcase the jewelry. All in ethnic
+                      style.
+                    </p>
+                  </div>
+                  <!-- Process -->
+                  <ul>
+                    <li><div>Research</div></li>
+                    <li><div>UI / UX design</div></li>
+                    <li><div>Logo design</div></li>
+                    <li><div>Illustrations</div></li>
+                    <li><div>Photo editing</div></li>
+                    <li><div>Development</div></li>
+                  </ul>
+                  <!-- Project Link -->
+                  <div>
+                    <a
+                      href="https://macramfrenia.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="button"
+                      ><span>View</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Slider navigation buttons -->
+            <div class="swiper-button-next">
+              <div>
+                <span>n</span>
+                <span>e</span>
+                <span>x</span>
+                <span>t</span>
+              </div>
+              <div>
+                <span>n</span>
+                <span>e</span>
+                <span>x</span>
+                <span>t</span>
+              </div>
+            </div>
+            <div class="swiper-button-prev">
+              <div>
+                <span>p</span>
+                <span>r</span>
+                <span>e</span>
+                <span>v</span>
+                <span>i</span>
+                <span>o</span>
+                <span>u</span>
+                <span>s</span>
+              </div>
+              <div>
+                <span>p</span>
+                <span>r</span>
+                <span>e</span>
+                <span>v</span>
+                <span>i</span>
+                <span>o</span>
+                <span>u</span>
+                <span>s</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Contact -->
+        <div class="tab-panel contact" id="contact-tab">
+          <!-- Heading -->
+          <div class="mb-40">
+            <h2>Contact</h2>
+          </div>
+          <!-- Paragraphs -->
+          <div>
+            <p>Feel free to connect with me.</p>
+          </div>
+          <div>
+            <p>
+              I'm open to new job opportunities for freelance or contract work.
+            </p>
+          </div>
+          <div>
+            <p>You can get in touch with me via email or LinkedIn.</p>
+          </div>
+          <div class="mb-40">
+            <p>I'd be happy to hear from you!</p>
+          </div>
+          <!-- Links -->
+          <div class="mb-20">
+            <a href="mailto:arvanitis.fotios@gmail.com"
+              >arvanitis.fotios@gmail.com</a
+            >
+          </div>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/fotis-arvanitis-3b9035183"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p style="display: none">
+          &copy; <span id="year"></span> Fotis Arvanitis | All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- Swiper JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@8.3.0/swiper-bundle.min.js"
+      integrity="sha256-XkuHAtRPl48/qMgm/o/z8VgsLuP0tTP7ZLx1iy3EqQ4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- JavaScript -->
+    <script type="module" src="./src/dist/js/main.js"></script>
+  </body>
+</html>
