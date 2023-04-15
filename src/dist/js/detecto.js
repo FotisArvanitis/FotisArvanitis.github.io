@@ -11,6 +11,17 @@ function navBar() {
     navBg.classList.toggle("nav-bg-expand");
     menu.classList.toggle("collapse");
   });
+
+  menu.removeAttribute("style");
+}
+
+// Header background
+//=========================================================================
+
+function headerBg() {
+  const headerBg = document.querySelector(".header-bg");
+
+  headerBg.removeAttribute("style");
 }
 
 // Abilities animations
@@ -129,10 +140,13 @@ const swiper = new Swiper(".swiper", {
 });
 
 function detectoJS() {
-  navBar();
-  abilitiesAnimations();
-  testimonialAnimations();
-  pricingAnimations();
+  window.onload = () => {
+    navBar();
+    headerBg();
+    abilitiesAnimations();
+    testimonialAnimations();
+    pricingAnimations();
+  };
 }
 
 detectoJS();
