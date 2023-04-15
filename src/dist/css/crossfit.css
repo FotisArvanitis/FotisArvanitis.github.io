@@ -373,7 +373,6 @@ header {
 }
 .header-text::before {
   content: "";
-  display: inline-block;
   position: absolute;
   top: 2px;
   left: 0;

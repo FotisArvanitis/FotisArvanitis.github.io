@@ -24,6 +24,15 @@ function navBar() {
   });
 }
 
+// Header texts
+// ==========================================================================
+
+function headerTexts() {
+  const headerTexts = document.querySelector(".header-text");
+
+  headerTexts.removeAttribute("style");
+}
+
 // Classes gallery animations
 // ==========================================================================
 
@@ -206,12 +215,15 @@ const swiper = new Swiper(".swiper", {
 });
 
 function crossfitJS() {
-  navBar();
-  classesGalleryAnimation();
-  teamImagesAnimation();
-  teamImagesAnimationReversed();
-  subscribeGalleryImagesAnimation();
-  noLimitsImageAnimation();
+  window.onload = () => {
+    navBar();
+    headerTexts();
+    classesGalleryAnimation();
+    teamImagesAnimation();
+    teamImagesAnimationReversed();
+    subscribeGalleryImagesAnimation();
+    noLimitsImageAnimation();
+  };
 }
 
 crossfitJS();
