@@ -102,7 +102,7 @@ h2 {
 
 h3 {
   font-size: 60px;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 h4 {
@@ -854,6 +854,7 @@ header {
 .team .name {
   font-family: Anton;
   font-size: 60px;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 .team .workouts {
@@ -925,7 +926,7 @@ header {
 }
 .timetable p {
   font-size: 38px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 .timetable ul {
   font-size: 22px;
@@ -935,7 +936,7 @@ header {
   margin-bottom: 0;
 }
 .timetable ul li {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .time {
@@ -1306,8 +1307,8 @@ footer .column {
   padding-bottom: 50px;
 }
 
-.mt-40 {
-  margin-top: 40px;
+.mt-30 {
+  margin-top: 30px;
 }
 
 .mb-10 {
