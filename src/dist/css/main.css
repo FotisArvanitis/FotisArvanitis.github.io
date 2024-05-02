@@ -542,7 +542,7 @@ header .container nav {
     height: 100%;
     z-index: 1045;
     background-color: white;
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.2);
     transition: right 1.2s ease;
   }
   .nav-bar .menu li + li:not(:last-of-type) {
@@ -613,6 +613,8 @@ header .container nav {
 .swiper {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
+  align-content: center;
+  min-height: 620px;
 }
 
 .swiper-slide {
@@ -650,9 +652,9 @@ header .container nav {
   padding: 20px;
 }
 .swiper-slide .project-image img {
-  width: 100%;
-  max-width: 480px;
-  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+  width: min(100%, 460px);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 .swiper-slide-active .project-image img {
   animation-name: scalingWithRotation;

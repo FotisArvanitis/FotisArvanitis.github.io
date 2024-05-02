@@ -10,6 +10,8 @@
 .swiper {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
+  align-content: center;
+  min-height: 620px;
 }
 
 // Slides.
@@ -60,8 +62,8 @@
     padding: 20px;
 
     img {
-      width: 100%;
-      max-width: 480px;
+      width: min(100%, 460px);
+      border-radius: 20px;
       box-shadow: $box-shadow;
     }
   }
