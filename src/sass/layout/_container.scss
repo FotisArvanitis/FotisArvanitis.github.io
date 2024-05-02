@@ -1,14 +1,14 @@
 // -----------------------------------------------------------------------------
-// This file contains CSS helper classes.
+// This file contains all styles related to the container class.
 // -----------------------------------------------------------------------------
 
 @use "../abstracts" as *;
 
-// Overflow
+// Container
 // ==========================================================================
 
-@media (max-width: 575px) {
-  .overflow-xs-hidden {
-    overflow: hidden;
-  }
+.container {
+  margin-inline: auto;
+  padding-inline: 20px;
+  width: clamp(#{$container-min-width}, 100%, #{$container-max-width});
 }
