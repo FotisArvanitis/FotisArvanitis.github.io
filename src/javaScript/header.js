@@ -6,31 +6,9 @@
 // ==========================================================================
 
 function navTabs() {
-  const menuToggler = document.querySelector(".navbar-toggle");
-  const menu = document.querySelector(".navbar-menu");
-  const menuButtons = document.querySelectorAll(".navbar-menu button");
-  const body = document.querySelector("body");
   const tabHeaders = document.querySelectorAll(
     ".navbar-menu button[data-target]"
   );
-
-  // Open mobile menu.
-
-  menuToggler.addEventListener("click", () => {
-    menu.classList.add("show");
-    body.classList.add("overflow-xs-hidden");
-  });
-
-  // Close mobile menu.
-
-  menuButtons.forEach((el) => {
-    el.addEventListener("click", () => {
-      if (menu.classList.contains("show")) {
-        menu.classList.remove("show");
-        body.classList.remove("overflow-xs-hidden");
-      }
-    });
-  });
 
   // Tabs.
 

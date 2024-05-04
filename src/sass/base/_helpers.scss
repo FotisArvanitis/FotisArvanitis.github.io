@@ -7,8 +7,6 @@
 // Overflow
 // ==========================================================================
 
-@media (max-width: 575px) {
-  .overflow-xs-hidden {
-    overflow: hidden;
-  }
+.overflow-hidden {
+  overflow: hidden;
 }
