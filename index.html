@@ -19,14 +19,21 @@
       rel="preload"
       as="font"
       type="font/woff2"
-      href="./src/assets/fonts/outfit-v2-latin-regular.woff2"
+      href="./src/assets/fonts/outfit-v11-latin-regular.woff2"
       crossorigin
     />
     <link
       rel="preload"
       as="font"
       type="font/woff2"
-      href="./src/assets/fonts/outfit-v2-latin-700.woff2"
+      href="./src/assets/fonts/outfit-v11-latin-600.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./src/assets/fonts/outfit-v11-latin-700.woff2"
       crossorigin
     />
     <!-- Swiper CSS -->
@@ -86,35 +93,35 @@
         <nav class="nav-bar" style="display: none">
           <!-- Name -->
           <a href="/">Fotis Arvanitis</a>
-          <!-- Menu toggler button -->
-          <button type="button" class="button menu-toggler">
+          <!-- Navbar toggle -->
+          <button type="button" class="btn navbar-toggle">
             <div></div>
             <div></div>
           </button>
           <!-- Menu -->
-          <div class="menu">
+          <div class="navbar-menu">
             <ul>
               <!-- About button -->
               <li>
-                <button type="button" class="button" data-target="#about-tab">
+                <button type="button" class="btn" data-target="#about-tab">
                   About
                 </button>
               </li>
               <!-- Work button -->
               <li>
-                <button type="button" class="button" data-target="#work-tab">
+                <button type="button" class="btn" data-target="#work-tab">
                   Work
                 </button>
               </li>
               <!-- Contact button -->
               <li>
-                <button type="button" class="button" data-target="#contact-tab">
+                <button type="button" class="btn" data-target="#contact-tab">
                   Contact
                 </button>
               </li>
               <!-- Close menu button -->
               <li>
-                <button type="button" class="button close-menu">Close</button>
+                <button type="button" class="btn btn-close">Close</button>
               </li>
             </ul>
           </div>
@@ -160,7 +167,8 @@
           <!-- Heading -->
           <div class="mb-40">
             <h1>
-              I'm Fotis Arvanitis, a passionate <b>UI</b>&<b>UX designer</b>.
+              I'm Fotis Arvanitis, <br />
+              a passionate UI & UX designer.
             </h1>
           </div>
           <!-- Paragraph -->
@@ -193,11 +201,11 @@
                 <div class="description">
                   <!-- Project type -->
                   <div>
-                    <p class="project-type">Personal project</p>
+                    <small class="project-type">Personal project</small>
                   </div>
                   <!-- Project title -->
                   <div>
-                    <p class="project-title">Crossfit training center</p>
+                    <h2 class="project-title">CrossFit training center</h2>
                   </div>
                   <!-- Project commentary -->
                   <div>
@@ -221,7 +229,7 @@
                     <a
                       href="/crossfit-training-center"
                       target="_blank"
-                      class="button"
+                      class="btn btn-primary"
                       ><span>View</span></a
                     >
                   </div>
@@ -240,14 +248,14 @@
                 <div class="description">
                   <!-- Project type -->
                   <div>
-                    <p class="project-type">Commercial project</p>
+                    <small class="project-type">Commercial project</small>
                   </div>
                   <!-- Project title -->
                   <div>
-                    <p class="project-title">Detecto</p>
+                    <h2 class="project-title">Detecto</h2>
                   </div>
                   <!-- Project commentary -->
-                  <div>
+                  <div class="mb-20">
                     <p class="project-commentary">
                       A landing page created for a new company that offers
                       financial services. The goal in this case was to create a
@@ -255,12 +263,12 @@
                       promotion.
                     </p>
                   </div>
-                  <!-- Strong project commentary -->
+                  <!-- Second project commentary -->
                   <div>
-                    <strong class="project-commentary">
+                    <p class="project-commentary fw-semibold">
                       * Company information such as brand logo and texts have
                       been replaced.
-                    </strong>
+                    </p>
                   </div>
                   <!-- Process -->
                   <ul>
@@ -272,7 +280,7 @@
                   </ul>
                   <!-- Project Link -->
                   <div>
-                    <a href="/detecto" target="_blank" class="button"
+                    <a href="/detecto" target="_blank" class="btn btn-primary"
                       ><span>View</span></a
                     >
                   </div>
@@ -291,11 +299,11 @@
                 <div class="description">
                   <!-- Project type -->
                   <div>
-                    <p class="project-type">Commercial project</p>
+                    <small class="project-type">Commercial project</small>
                   </div>
                   <!-- Project title -->
                   <div>
-                    <p class="project-title">Macram&shy;frenia</p>
+                    <h2 class="project-title">Macram&shy;frenia</h2>
                   </div>
                   <!-- Project commentary -->
                   <div>
@@ -321,7 +329,7 @@
                       href="https://macramfrenia.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="button"
+                      class="btn btn-primary"
                       ><span>View</span></a
                     >
                   </div>
@@ -409,7 +417,7 @@
     <footer>
       <div class="container">
         <p style="display: none">
-          &copy; <span id="year"></span> Fotis Arvanitis | All Rights Reserved.
+          &copy; Fotis Arvanitis <span id="year"></span> | All Rights Reserved.
         </p>
       </div>
     </footer>

@@ -16,7 +16,7 @@ function preludeJS() {
       ".prelude div:nth-of-type(2)"
     );
     const aboutTabHeader = document.querySelector(
-      ".menu button[data-target='#about-tab']"
+      ".navbar-menu button[data-target='#about-tab']"
     );
     const aboutTabPanel = document.querySelector(".tab-panel.about");
     const greetingDiv = document.querySelector(".greeting");

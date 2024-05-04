@@ -21,7 +21,7 @@ function contactTextsDelay() {
   // delay-time for each element based on its index number.
 
   mergedArray.forEach((el, index) => {
-    el.style.animationDelay = index / 10 + 1.6 + "s";
+    el.style.animationDelay = index / 10 + 1 + "s";
   });
 }
 

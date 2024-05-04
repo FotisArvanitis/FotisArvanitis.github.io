@@ -6,11 +6,13 @@
 // ==========================================================================
 
 function navTabs() {
-  const menuToggler = document.querySelector("nav button.menu-toggler");
-  const menu = document.querySelector("nav .menu");
-  const menuButtons = document.querySelectorAll("nav .menu button");
+  const menuToggler = document.querySelector(".navbar-toggle");
+  const menu = document.querySelector(".navbar-menu");
+  const menuButtons = document.querySelectorAll(".navbar-menu button");
   const body = document.querySelector("body");
-  const tabHeaders = document.querySelectorAll(".menu button[data-target]");
+  const tabHeaders = document.querySelectorAll(
+    ".navbar-menu button[data-target]"
+  );
 
   // Open mobile menu.
 
@@ -34,7 +36,9 @@ function navTabs() {
 
   tabHeaders.forEach((el) => {
     el.addEventListener("click", (el) => {
-      const activeTabHeader = document.querySelector(".menu button.active");
+      const activeTabHeader = document.querySelector(
+        ".navbar-menu button.active"
+      );
       const activeTabPanel = document.querySelector("main .tab-panel.active");
       const tabHeaderDataTarget = el.target.getAttribute("data-target");
       const nextTabPanel = document.querySelector(tabHeaderDataTarget);

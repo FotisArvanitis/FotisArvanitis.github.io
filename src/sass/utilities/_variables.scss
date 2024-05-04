@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// This file contains all application-wide Sass variables.
+// This file contains all variables.
 // -----------------------------------------------------------------------------
 
 @use "../base/fonts" as *;
@@ -8,7 +8,7 @@
 // ==========================================================================
 
 $ff-name: Josefin Sans;
-$ff-base: Outfit;
+$ff-body: Outfit;
 
 // Color variables
 // ==========================================================================
@@ -16,11 +16,47 @@ $ff-base: Outfit;
 $white: rgb(255, 255, 255);
 $black: rgb(0, 0, 0);
 
+// Body variables
+// ==========================================================================
+
+$body-font-family: $ff-body, sans-serif;
+$body-font-size: 16px;
+$body-font-weight: 400;
+$body-color: $black;
+$body-bg: $white;
+
+// Heading variables
+// ==========================================================================
+
+$heading-font-weight: 400;
+$heading-line-height: 1.2;
+
+$h1-font-size: 3.812rem;
+$h2-font-size: 3.062rem;
+$h3-font-size: 2.438rem;
+$h4-font-size: 1.938rem;
+$h5-font-size: 1.562rem;
+$h6-font-size: 1.25rem;
+
+// Link variables
+// ==========================================================================
+
+$link-color: currentColor;
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+// Small variables
+// ==========================================================================
+
+$small-font-size: 0.875rem;
+
 // Breakpoint variables
 // ==========================================================================
 
+$until-small: 575px;
 $small: 576px;
 $medium: 768px;
+$until-large: 991px;
 $large: 992px;
 $xlarge: 1200px;
 $xxlarge: 1400px;
@@ -30,21 +66,35 @@ $xxlarge: 1400px;
 
 $container-min-width: 320px;
 $container-max-width: 1440px;
+$container-padding-inline: 20px;
+
+// Button variables
+// ==========================================================================
+
+$btn-focus-shadow-color: $black;
+
+// Primary
+
+$btn-primary-color: $white;
+$btn-primary-bg: currentColor;
+$btn-primary-border-color: $black;
 
 // Box shadow variables
 // ==========================================================================
 
+$box-shadow-sm: 0 4px 12px rgba(0 0 0 / 0.2);
 $box-shadow: 0 4px 12px rgb(0 0 0 / 0.2), 0 8px 24px rgb(0 0 0 / 0.2);
 
 // Z-index variables
 // ==========================================================================
 
-$zindex-dropdown: 1000;
-$zindex-sticky: 1020;
-$zindex-fixed: 1030;
-$zindex-offcanvas-backdrop: 1040;
-$zindex-offcanvas: 1045;
-$zindex-modal-backdrop: 1050;
-$zindex-modal: 1055;
-$zindex-popover: 1070;
-$zindex-tooltip: 1080;
+$zindex-tooltip: 100;
+$zindex-popover: 120;
+$zindex-dropdown: 130;
+$zindex-sticky: 140;
+$zindex-fixed: 150;
+$zindex-offcanvas-backdrop: 155;
+$zindex-offcanvas: 160;
+$zindex-popup: 170;
+$zindex-modal: 180;
+$zindex-toast: 190;

@@ -45,17 +45,16 @@
 
 body {
   margin: 0; // 1
-  height: 100vh;
+  height: 100svh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 50px;
-  font-family: $ff-base;
-  font-size: 18px;
-  font-weight: 400;
+  gap: 40px;
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+  font-weight: $body-font-weight;
   line-height: 1.5; // 2
-  letter-spacing: 2px;
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
+  color: $body-color;
+  background-color: $body-bg;
   -webkit-text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba(0 0 0 / 0); // 4
 }
@@ -90,18 +89,33 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0; // 1
-  margin-bottom: 0; // 1
-  text-transform: uppercase;
+  margin-block: 0; // 1
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
 }
 
 h1 {
-  font-size: 40px;
-  font-weight: 400;
+  font-size: $h1-font-size;
 }
 
 h2 {
-  font-size: 48px;
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
 }
 
 // Text-level semantics
@@ -110,18 +124,17 @@ h2 {
 // Reset top & bottom margins on paragraphs.
 
 p {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-block: 0;
 }
 
 // Basic styles for links.
 
 a {
-  color: currentColor;
-  text-decoration: none;
+  color: $link-color;
+  text-decoration: $link-decoration;
 
-  &:not(.button):hover {
-    text-decoration: underline;
+  &:not(.btn):hover {
+    text-decoration: $link-hover-decoration;
   }
 }
 
@@ -165,7 +178,7 @@ strong {
 // Add the correct font size in all browsers.
 
 small {
-  font-size: 14px;
+  font-size: $small-font-size;
 }
 
 // Prevent `sub` and `sup` elements from affecting the line height in

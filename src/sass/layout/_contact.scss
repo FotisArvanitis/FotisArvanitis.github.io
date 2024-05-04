@@ -1,11 +1,14 @@
 // -----------------------------------------------------------------------------
-// This file contains all the styles related to the "Contact" section of the site.
+// This file contains all the styles related to the "Contact" section.
 // -----------------------------------------------------------------------------
 
 @use "../utilities" as *;
 
+// Contact
+// ==========================================================================
+
 .contact {
-  // Divisions.
+  // Div.
 
   > div {
     overflow: hidden;
@@ -14,39 +17,53 @@
   // Heading.
 
   h2 {
-    max-width: 660px;
     position: relative;
+    max-width: 600px;
+    padding-bottom: 10px;
     animation-name: slideUp;
     @include animation-std-style(backwards);
 
-    // After
+    // After.
 
     &::after {
       content: "";
-      width: 100%;
-      height: 1px;
       position: absolute;
       left: 0;
       bottom: 0;
+      width: 100%;
+      height: 1px;
       background-color: $black;
       animation-name: zeroToFullWidth;
       @include animation-std-style(backwards);
-      animation-delay: 1.6s;
+      animation-delay: 1s;
     }
   }
 
-  // Paragraphs.
+  // Paragraph.
 
   p {
     animation-name: slideUp;
     @include animation-std-style(backwards);
   }
 
-  // Links.
+  // Link.
 
   a {
     display: inline-block;
     animation-name: slideUp;
     @include animation-std-style(backwards);
+  }
+
+  // Rules for medium screen sizes and up.
+
+  @media (min-width: $medium) {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    // Div.
+
+    > div {
+      grid-column: 2 / span 4;
+    }
   }
 }

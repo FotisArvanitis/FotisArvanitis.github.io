@@ -9,10 +9,9 @@
 // list-style, padding and margin.
 
 @mixin reset-list {
-  list-style: none;
+  margin-block: 0;
   padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+  list-style: none;
 }
 
 // Animations
@@ -21,7 +20,7 @@
 // Animation standard styles.
 
 @mixin animation-std-style($fill-mode) {
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   animation-fill-mode: $fill-mode;
 }

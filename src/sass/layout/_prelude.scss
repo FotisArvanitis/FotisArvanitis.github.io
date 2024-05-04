@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// This file contains all the styles related to the "Prelude" of the site.
+// This file contains all the styles related to the "Prelude".
 // -----------------------------------------------------------------------------
 
 @use "../utilities" as *;
@@ -10,16 +10,15 @@
 .prelude {
   display: none;
   justify-content: center;
-  row-gap: 10px;
 
   // Rules for medium screens and up.
 
   @media (min-width: $medium) {
     grid-template-columns: auto auto;
-    gap: 0 40px;
+    column-gap: 20px;
   }
 
-  // Division.
+  // Div.
 
   div {
     line-height: 1.2;
@@ -31,7 +30,7 @@
     &:nth-of-type(2) {
       display: flex;
       font-family: $ff-name;
-      font-size: 38px;
+      font-size: 3.062rem;
       font-weight: 700;
       text-transform: uppercase;
 
@@ -39,19 +38,9 @@
 
       span {
         animation-name: preludeAnimation, slideDownOut;
-        animation-duration: 1.6s;
-        animation-timing-function: ease;
+        animation-duration: 1.2s;
+        animation-timing-function: ease-out;
         animation-fill-mode: backwards, forwards;
-
-        + span {
-          margin-left: 6px;
-        }
-      }
-
-      // Rules for small screens and up.
-
-      @media (min-width: 400px) {
-        font-size: 44px;
       }
     }
 
@@ -59,19 +48,19 @@
 
     &:first-of-type span {
       &:first-of-type {
-        animation-delay: 0.3s, 4.5s;
+        animation-delay: 0.3s, 4.4s;
       }
       &:nth-of-type(2) {
-        animation-delay: 0.5s, 4.5s;
+        animation-delay: 0.5s, 4.4s;
       }
       &:nth-of-type(3) {
-        animation-delay: 0.7s, 4.5s;
+        animation-delay: 0.7s, 4.4s;
       }
       &:nth-of-type(4) {
-        animation-delay: 0.4s, 4.5s;
+        animation-delay: 0.4s, 4.4s;
       }
       &:nth-of-type(5) {
-        animation-delay: 0.6s, 4.5s;
+        animation-delay: 0.6s, 4.4s;
       }
     }
 
@@ -79,31 +68,31 @@
 
     &:nth-of-type(2) span {
       &:first-of-type {
-        animation-delay: 0.2s, 4.5s;
+        animation-delay: 0.2s, 4.4s;
       }
       &:nth-of-type(2) {
-        animation-delay: 0.4s, 4.5s;
+        animation-delay: 0.4s, 4.4s;
       }
       &:nth-of-type(3) {
-        animation-delay: 0.8s, 4.5s;
+        animation-delay: 0.8s, 4.4s;
       }
       &:nth-of-type(4) {
-        animation-delay: 0.1s, 4.5s;
+        animation-delay: 0.1s, 4.4s;
       }
       &:nth-of-type(5) {
-        animation-delay: 0.5s, 4.5s;
+        animation-delay: 0.5s, 4.4s;
       }
       &:nth-of-type(6) {
-        animation-delay: 0.3s, 4.5s;
+        animation-delay: 0.3s, 4.4s;
       }
       &:nth-of-type(7) {
-        animation-delay: 0.7s, 4.5s;
+        animation-delay: 0.7s, 4.4s;
       }
       &:nth-of-type(8) {
-        animation-delay: 0.9s, 4.5s;
+        animation-delay: 0.9s, 4.4s;
       }
       &:nth-of-type(9) {
-        animation-delay: 0.6s, 4.5s;
+        animation-delay: 0.6s, 4.4s;
       }
     }
 
@@ -116,16 +105,13 @@
       // Paragraph.
 
       p {
+        font-size: 1.125rem;
         text-transform: uppercase;
         animation-name: slideDown, slideDownOut;
-        animation-duration: 1.6s;
-        animation-timing-function: ease;
-        animation-delay: 2.5s, 4.5s;
+        animation-duration: 1.2s;
+        animation-timing-function: ease-out;
+        animation-delay: 2.4s, 4.4s;
         animation-fill-mode: backwards, forwards;
-
-        @media (min-width: 400px) {
-          letter-spacing: 4px;
-        }
       }
 
       // Rules for medium screens and up.
@@ -147,19 +133,13 @@
   // Paragraph.
 
   p {
-    font-size: 50px;
+    font-size: 3.062rem;
     font-weight: 700;
     text-transform: uppercase;
     animation-name: slideUp, slideUpOut;
-    animation-duration: 1.6s;
-    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
     animation-delay: 0s, 2s;
     animation-fill-mode: backwards, forwards;
-
-    // Rules for small screens and up.
-
-    @media (min-width: $small) {
-      font-size: 58px;
-    }
   }
 }

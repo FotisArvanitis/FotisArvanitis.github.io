@@ -1,11 +1,14 @@
 // -----------------------------------------------------------------------------
-// This file contains all the styles related to the "About" section of the site.
+// This file contains all the styles related to the "About" section.
 // -----------------------------------------------------------------------------
 
 @use "../utilities" as *;
 
+// About
+// ==========================================================================
+
 .about {
-  // Division.
+  // Div.
 
   > div {
     overflow: hidden;
@@ -14,18 +17,42 @@
   // Heading.
 
   h1 {
-    max-width: 740px;
+    max-width: 600px;
     animation-name: slideUp;
     @include animation-std-style(backwards);
+
+    // Rules until large screen sizes.
+
+    @media (max-width: $until-large) {
+      font-size: $h2-font-size;
+    }
   }
 
   // Paragraph.
 
   p {
-    max-width: 930px;
-    font-size: 20px;
+    max-width: 500px;
     animation-name: slideUp;
     @include animation-std-style(backwards);
-    animation-delay: 1.6s;
+    animation-delay: 1s;
+  }
+
+  // Rules for medium screen sizes and up.
+
+  @media (min-width: $medium) {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    // Div.
+
+    > div {
+      grid-column: 2 / span 4;
+    }
+
+    // Paragraph.
+
+    p {
+      max-width: 600px;
+    }
   }
 }

@@ -9,12 +9,22 @@
 function descriptionTextsDelay() {
   // Select elements and create arrays with them.
 
-  const paragraphs = Array.from(
-    document.querySelectorAll(".swiper-slide-active .description div p")
+  const projectType = Array.from(
+    document.querySelectorAll(
+      ".swiper-slide-active .description div .project-type"
+    )
   );
 
-  const strongText = Array.from(
-    document.querySelectorAll(".swiper-slide-active .description div strong")
+  const projectTitle = Array.from(
+    document.querySelectorAll(
+      ".swiper-slide-active .description div .project-title"
+    )
+  );
+
+  const projectCommentary = Array.from(
+    document.querySelectorAll(
+      ".swiper-slide-active .description div .project-commentary"
+    )
   );
 
   const listItems = Array.from(
@@ -31,8 +41,9 @@ function descriptionTextsDelay() {
 
   // Concatenate the arrays.
 
-  const mergedArray = paragraphs.concat(
-    strongText,
+  const mergedArray = projectType.concat(
+    projectTitle,
+    projectCommentary,
     listItems,
     projectsLinks,
     swiperBtns
@@ -42,7 +53,7 @@ function descriptionTextsDelay() {
   // delay-time for each element based on its index number.
 
   mergedArray.forEach((el, index) => {
-    el.style.animationDelay = index / 10 + 1.6 + "s";
+    el.style.animationDelay = index / 10 + 1 + "s";
   });
 }
 

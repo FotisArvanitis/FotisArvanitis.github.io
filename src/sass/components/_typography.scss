@@ -1,14 +1,12 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the container class.
+// This file contains all the classes related to typography styles.
 // -----------------------------------------------------------------------------
 
 @use "../utilities" as *;
 
-// Container
+// Font weight
 // ==========================================================================
 
-.container {
-  margin-inline: auto;
-  padding-inline: $container-padding-inline;
-  width: clamp(#{$container-min-width}, 100%, #{$container-max-width});
+.fw-semibold {
+  font-weight: 600;
 }

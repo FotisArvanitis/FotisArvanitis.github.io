@@ -1,3 +1,79 @@
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideUpOut {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes slideDownOut {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes scalingWithRotation {
+  from {
+    transform: scale(0) rotate(-90deg);
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+  }
+}
+@keyframes zeroToFullWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes preludeAnimation {
+  from {
+    transform: translateY(-120px) rotateY(360deg) scale(0);
+  }
+  to {
+    transform: translateY(0) rotateY(0deg) scale(1);
+  }
+}
+@keyframes swiperBtnsAnimation {
+  from {
+    right: 40px;
+    letter-spacing: 20px;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    letter-spacing: inherit;
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: "Josefin Sans";
   font-style: normal;
@@ -8,13 +84,19 @@
   font-family: "Outfit";
   font-style: normal;
   font-weight: 400;
-  src: url("../../assets/fonts/outfit-v2-latin-regular.woff2") format("woff2");
+  src: url("../../assets/fonts/outfit-v11-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../assets/fonts/outfit-v11-latin-600.woff2") format("woff2");
 }
 @font-face {
   font-family: "Outfit";
   font-style: normal;
   font-weight: 700;
-  src: url("../../assets/fonts/outfit-v2-latin-700.woff2") format("woff2");
+  src: url("../../assets/fonts/outfit-v11-latin-700.woff2") format("woff2");
 }
 *,
 *::before,
@@ -35,15 +117,14 @@
 
 body {
   margin: 0;
-  height: 100vh;
+  height: 100svh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 50px;
-  font-family: Outfit;
-  font-size: 18px;
+  gap: 40px;
+  font-family: Outfit, sans-serif;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 2px;
   color: black;
   background-color: white;
   -webkit-text-size-adjust: 100%;
@@ -69,30 +150,44 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
-  margin-bottom: 0;
-  text-transform: uppercase;
+  margin-block: 0;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 3.812rem;
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 3.062rem;
+}
+
+h3 {
+  font-size: 2.438rem;
+}
+
+h4 {
+  font-size: 1.938rem;
+}
+
+h5 {
+  font-size: 1.562rem;
+}
+
+h6 {
+  font-size: 1.25rem;
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-block: 0;
 }
 
 a {
   color: currentColor;
   text-decoration: none;
 }
-a:not(.button):hover {
+a:not(.btn):hover {
   text-decoration: underline;
 }
 
@@ -118,7 +213,7 @@ strong {
 }
 
 small {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 sub,
@@ -246,82 +341,6 @@ progress {
   display: none;
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-@keyframes slideUpOut {
-  from {
-    transform: translateY(0%);
-  }
-  to {
-    transform: translateY(-100%);
-  }
-}
-@keyframes slideLeft {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0%);
-  }
-}
-@keyframes slideDownOut {
-  from {
-    transform: translateY(0%);
-  }
-  to {
-    transform: translateY(100%);
-  }
-}
-@keyframes scalingWithRotation {
-  from {
-    transform: scale(0) rotate(-90deg);
-  }
-  to {
-    transform: scale(1) rotate(0deg);
-  }
-}
-@keyframes zeroToFullWidth {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes preludeAnimation {
-  from {
-    transform: translateY(-120px) rotateY(360deg) scale(0);
-  }
-  to {
-    transform: translateY(0) rotateY(0deg) scale(1);
-  }
-}
-@keyframes swiperBtnsAnimation {
-  from {
-    right: 40px;
-    letter-spacing: 20px;
-    opacity: 0;
-  }
-  to {
-    right: 0;
-    letter-spacing: inherit;
-    opacity: 1;
-  }
-}
 @media (max-width: 575px) {
   .overflow-xs-hidden {
     overflow: hidden;
@@ -336,12 +355,11 @@ progress {
 .prelude {
   display: none;
   justify-content: center;
-  row-gap: 10px;
 }
 @media (min-width: 768px) {
   .prelude {
     grid-template-columns: auto auto;
-    gap: 0 40px;
+    column-gap: 20px;
   }
 }
 .prelude div {
@@ -350,82 +368,70 @@ progress {
 .prelude div:first-of-type, .prelude div:nth-of-type(2) {
   display: flex;
   font-family: Josefin Sans;
-  font-size: 38px;
+  font-size: 3.062rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 .prelude div:first-of-type span, .prelude div:nth-of-type(2) span {
   animation-name: preludeAnimation, slideDownOut;
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-out;
   animation-fill-mode: backwards, forwards;
 }
-.prelude div:first-of-type span + span, .prelude div:nth-of-type(2) span + span {
-  margin-left: 6px;
-}
-@media (min-width: 400px) {
-  .prelude div:first-of-type, .prelude div:nth-of-type(2) {
-    font-size: 44px;
-  }
-}
 .prelude div:first-of-type span:first-of-type {
-  animation-delay: 0.3s, 4.5s;
+  animation-delay: 0.3s, 4.4s;
 }
 .prelude div:first-of-type span:nth-of-type(2) {
-  animation-delay: 0.5s, 4.5s;
+  animation-delay: 0.5s, 4.4s;
 }
 .prelude div:first-of-type span:nth-of-type(3) {
-  animation-delay: 0.7s, 4.5s;
+  animation-delay: 0.7s, 4.4s;
 }
 .prelude div:first-of-type span:nth-of-type(4) {
-  animation-delay: 0.4s, 4.5s;
+  animation-delay: 0.4s, 4.4s;
 }
 .prelude div:first-of-type span:nth-of-type(5) {
-  animation-delay: 0.6s, 4.5s;
+  animation-delay: 0.6s, 4.4s;
 }
 .prelude div:nth-of-type(2) span:first-of-type {
-  animation-delay: 0.2s, 4.5s;
+  animation-delay: 0.2s, 4.4s;
 }
 .prelude div:nth-of-type(2) span:nth-of-type(2) {
-  animation-delay: 0.4s, 4.5s;
+  animation-delay: 0.4s, 4.4s;
 }
 .prelude div:nth-of-type(2) span:nth-of-type(3) {
-  animation-delay: 0.8s, 4.5s;
+  animation-delay: 0.8s, 4.4s;
 }
 .prelude div:nth-of-type(2) span:nth-of-type(4) {
-  animation-delay: 0.1s, 4.5s;
+  animation-delay: 0.1s, 4.4s;
 }
 .prelude div:nth-of-type(2) span:nth-of-type(5) {
-  animation-delay: 0.5s, 4.5s;
+  animation-delay: 0.5s, 4.4s;
 }
 .prelude div:nth-of-type(2) span:nth-of-type(6) {
-  animation-delay: 0.3s, 4.5s;
+  animation-delay: 0.3s, 4.4s;
 }
 .prelude div:nth-of-type(2) span:nth-of-type(7) {
-  animation-delay: 0.7s, 4.5s;
+  animation-delay: 0.7s, 4.4s;
 }
 .prelude div:nth-of-type(2) span:nth-of-type(8) {
-  animation-delay: 0.9s, 4.5s;
+  animation-delay: 0.9s, 4.4s;
 }
 .prelude div:nth-of-type(2) span:nth-of-type(9) {
-  animation-delay: 0.6s, 4.5s;
+  animation-delay: 0.6s, 4.4s;
 }
 .prelude div:nth-of-type(3) {
   overflow: hidden;
   text-align: end;
 }
 .prelude div:nth-of-type(3) p {
+  font-size: 1.125rem;
   text-transform: uppercase;
   animation-name: slideDown, slideDownOut;
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
-  animation-delay: 2.5s, 4.5s;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-out;
+  animation-delay: 2.4s, 4.4s;
   animation-fill-mode: backwards, forwards;
-}
-@media (min-width: 400px) {
-  .prelude div:nth-of-type(3) p {
-    letter-spacing: 4px;
-  }
 }
 @media (min-width: 768px) {
   .prelude div:nth-of-type(3) {
@@ -438,43 +444,38 @@ progress {
   overflow: hidden;
 }
 .greeting p {
-  font-size: 50px;
+  font-size: 3.062rem;
   font-weight: 700;
   text-transform: uppercase;
   animation-name: slideUp, slideUpOut;
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   animation-delay: 0s, 2s;
   animation-fill-mode: backwards, forwards;
 }
-@media (min-width: 576px) {
-  .greeting p {
-    font-size: 58px;
-  }
-}
 
 header {
-  height: 44px;
+  height: 49px;
 }
 header .container {
   overflow: hidden;
 }
 header .container nav {
   animation-name: slideDown;
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   animation-fill-mode: backwards;
 }
 
 .nav-bar {
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
-  height: 44px;
+  align-items: flex-end;
+  padding-top: 20px;
 }
 .nav-bar a {
   font-family: Josefin Sans;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
@@ -482,89 +483,81 @@ header .container nav {
 .nav-bar a:hover {
   text-decoration: none;
 }
-.nav-bar .menu-toggler {
+.nav-bar .navbar-toggle {
   padding: 0;
 }
-.nav-bar .menu-toggler div {
+.nav-bar .navbar-toggle div {
   height: 2px;
   margin: 6px;
+  width: 30px;
   background-color: black;
 }
-.nav-bar .menu-toggler div:first-of-type {
-  width: 30px;
-}
-.nav-bar .menu-toggler div:last-of-type {
-  width: 15px;
-  margin-left: auto;
-}
 @media (min-width: 576px) {
-  .nav-bar .menu-toggler {
+  .nav-bar .navbar-toggle {
     display: none;
   }
 }
-.nav-bar .menu.show {
+.nav-bar .navbar-menu.show {
   right: 0;
+  visibility: visible;
 }
-.nav-bar .menu ul {
-  list-style: none;
+.nav-bar .navbar-menu ul {
+  margin-block: 0;
   padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+  list-style: none;
 }
-.nav-bar .menu button {
+.nav-bar .navbar-menu button {
   padding: 0;
+  line-height: 1;
 }
-.nav-bar .menu button.active {
+.nav-bar .navbar-menu button.active {
   font-weight: 700;
 }
 @media (max-width: 575px) {
-  .nav-bar .menu {
-    display: grid;
-    place-items: center;
+  .nav-bar .navbar-menu {
     position: fixed;
     top: 0;
-    right: calc(-100% + -30px);
+    right: calc(100% * -1);
+    display: grid;
+    place-items: center;
     width: 100%;
     height: 100%;
-    z-index: 1045;
     background-color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.2);
-    transition: right 1.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 160;
+    visibility: hidden;
+    transition: right 600ms ease-out, visibility 600ms ease-out;
   }
-  .nav-bar .menu li + li:not(:last-of-type) {
-    margin-top: 8px;
+  .nav-bar .navbar-menu li + li:not(:has(.btn-close)) {
+    margin-top: 14px;
   }
-  .nav-bar .menu button {
-    font-size: 26px;
-    letter-spacing: 2px;
+  .nav-bar .navbar-menu button {
+    font-size: 1.938rem;
   }
-  .nav-bar .menu button.close-menu {
-    font-size: 18px;
+  .nav-bar .navbar-menu button.btn-close {
     margin-top: 40px;
+    font-size: 1.125rem;
   }
-  .nav-bar .menu button.close-menu::before {
+  .nav-bar .navbar-menu button.btn-close::before {
     content: "";
     display: block;
     position: relative;
     top: -20px;
-    width: 108px;
-    height: 2px;
+    width: 112px;
+    height: 1px;
     background-color: black;
   }
 }
 @media (min-width: 576px) {
-  .nav-bar .menu li {
-    display: inline;
+  .nav-bar .navbar-menu ul {
+    display: flex;
+    gap: 20px;
   }
-  .nav-bar .menu li:last-of-type {
+  .nav-bar .navbar-menu li:has(.btn-close) {
     display: none;
   }
-  .nav-bar .menu li + li {
-    margin-left: 20px;
-  }
-  .nav-bar .menu button {
-    font-size: 18px;
-    line-height: 1;
+  .nav-bar .navbar-menu button {
+    font-size: 1.125rem;
   }
 }
 
@@ -573,27 +566,43 @@ header .container nav {
 }
 .tab-panel.hide {
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 400ms ease-out;
 }
 
 .about > div {
   overflow: hidden;
 }
 .about h1 {
-  max-width: 740px;
+  max-width: 600px;
   animation-name: slideUp;
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   animation-fill-mode: backwards;
 }
+@media (max-width: 991px) {
+  .about h1 {
+    font-size: 3.062rem;
+  }
+}
 .about p {
-  max-width: 930px;
-  font-size: 20px;
+  max-width: 500px;
   animation-name: slideUp;
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   animation-fill-mode: backwards;
-  animation-delay: 1.6s;
+  animation-delay: 1s;
+}
+@media (min-width: 768px) {
+  .about {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .about > div {
+    grid-column: 2/span 4;
+  }
+  .about p {
+    max-width: 600px;
+  }
 }
 
 .swiper {
@@ -606,7 +615,8 @@ header .container nav {
 .swiper-slide {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 50px 40px;
+  align-items: center;
+  gap: 40px;
 }
 @media (min-width: 1200px) {
   .swiper-slide {
@@ -614,21 +624,21 @@ header .container nav {
   }
 }
 .swiper-slide-active {
-  transition-delay: 0.4s;
+  transition-delay: 400ms;
 }
 .swiper-slide-active .description .project-type,
 .swiper-slide-active .description .project-title,
 .swiper-slide-active .description .project-commentary,
 .swiper-slide-active .description ul li div {
   animation-name: slideUp;
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   animation-fill-mode: backwards;
 }
 .swiper-slide-active .description > div > a {
   animation-name: slideLeft;
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   animation-fill-mode: backwards;
 }
 
@@ -644,8 +654,8 @@ header .container nav {
 }
 .swiper-slide-active .project-image img {
   animation-name: scalingWithRotation;
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   animation-fill-mode: backwards;
 }
 
@@ -655,119 +665,97 @@ header .container nav {
   overflow: hidden;
 }
 .description .project-type {
-  font-size: 16px;
+  display: block;
 }
 .description .project-title {
-  margin-top: 18px;
-  margin-bottom: 6px;
-  font-size: 42px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1.1;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 .description .project-commentary {
-  max-width: 740px;
-}
-.description strong.project-commentary {
-  margin-top: 25px;
-  display: block;
-  font-size: 16px;
+  max-width: 720px;
 }
 .description ul {
-  list-style: none;
+  list-style-type: none;
+  margin-block: 40px;
   padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  display: grid;
+  gap: 10px;
 }
 .description ul li {
   text-transform: capitalize;
-}
-.description ul li + li {
-  margin-top: 12px;
-}
-.description a {
-  position: relative;
-  overflow: hidden;
-  color: white;
-  background-color: currentColor;
-  border-color: black;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-.description a::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: black;
-  transition: 0.4s ease;
-}
-@media (hover: hover) {
-  .description a:hover::before {
-    transform: translateY(100%);
-  }
-}
-.description a span {
-  mix-blend-mode: difference;
 }
 
 .contact > div {
   overflow: hidden;
 }
 .contact h2 {
-  max-width: 660px;
   position: relative;
+  max-width: 600px;
+  padding-bottom: 10px;
   animation-name: slideUp;
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   animation-fill-mode: backwards;
 }
 .contact h2::after {
   content: "";
-  width: 100%;
-  height: 1px;
   position: absolute;
   left: 0;
   bottom: 0;
+  width: 100%;
+  height: 1px;
   background-color: black;
   animation-name: zeroToFullWidth;
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   animation-fill-mode: backwards;
-  animation-delay: 1.6s;
+  animation-delay: 1s;
 }
 .contact p {
   animation-name: slideUp;
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   animation-fill-mode: backwards;
 }
 .contact a {
   display: inline-block;
   animation-name: slideUp;
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   animation-fill-mode: backwards;
+}
+@media (min-width: 768px) {
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .contact > div {
+    grid-column: 2/span 4;
+  }
 }
 
 footer {
-  height: 39px;
+  height: 34px;
 }
 footer .container {
   overflow: hidden;
 }
 footer p {
-  margin-bottom: 12px;
+  padding-bottom: 10px;
   animation-name: slideUp;
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   animation-fill-mode: backwards;
 }
 footer p::first-letter {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1;
-  vertical-align: text-top;
+  vertical-align: -1px;
+}
+
+.fw-semibold {
+  font-weight: 600;
 }
 
 .mb-20 {
@@ -778,8 +766,12 @@ footer p::first-letter {
   margin-bottom: 40px;
 }
 
-.button {
+.btn {
   display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: currentColor;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -789,7 +781,35 @@ footer p::first-letter {
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
+  padding: 6px 12px;
+}
+.btn:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 2px black;
+}
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  color: white;
+  background-color: currentColor;
+  border: 1px solid black;
+}
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  transition: 400ms ease-out;
+}
+@media (hover: hover) {
+  .btn-primary:hover::before {
+    transform: translateY(100%);
+  }
+}
+.btn-primary span {
+  mix-blend-mode: difference;
 }
 
 .swiper-button-next, .swiper-button-prev {
@@ -798,8 +818,8 @@ footer p::first-letter {
   text-transform: uppercase;
   line-height: 0.8;
   overflow: hidden;
-  animation-duration: 1.6s;
-  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
   animation-fill-mode: both;
 }
 .swiper-button-next::after, .swiper-button-prev::after {
@@ -819,9 +839,10 @@ footer p::first-letter {
 }
 .swiper-button-next div, .swiper-button-prev div {
   display: flex;
+  column-gap: 2px;
 }
 .swiper-button-next div span, .swiper-button-prev div span {
-  transition: transform 0.4s ease;
+  transition: transform 400ms ease-out;
 }
 .swiper-button-next div span:nth-of-type(2), .swiper-button-prev div span:nth-of-type(2) {
   transition-delay: 0.1s;
@@ -846,18 +867,18 @@ footer p::first-letter {
 }
 .swiper-button-next {
   height: 32px;
-  font-size: 39px;
+  font-size: 2.438rem;
   font-weight: 700;
 }
 @media (max-width: 399px) {
   .swiper-button-next {
-    margin-top: 50px;
-    margin-bottom: 15px;
+    margin-top: 40px;
+    margin-bottom: 10px;
   }
 }
 @media (min-width: 400px) {
   .swiper-button-next {
-    bottom: 30px;
+    bottom: 26px;
   }
 }
 .swiper-button-next div:first-of-type {
@@ -870,7 +891,7 @@ footer p::first-letter {
 }
 .swiper-button-prev {
   height: 16px;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 @media (min-width: 400px) {
   .swiper-button-prev {

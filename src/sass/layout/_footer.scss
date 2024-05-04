@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// This file contains all the styles related to the "Footer" of the site.
+// This file contains all the styles related to the footer section.
 // -----------------------------------------------------------------------------
 
 @use "../utilities" as *;
@@ -8,7 +8,7 @@
 // ==========================================================================
 
 footer {
-  height: 39px;
+  height: 34px;
 
   // Container.
 
@@ -19,14 +19,16 @@ footer {
   // Paragraph.
 
   p {
-    margin-bottom: 12px;
+    padding-bottom: 10px;
     animation-name: slideUp;
     @include animation-std-style(backwards);
 
+    // First letter
+
     &::first-letter {
-      font-size: 22px;
+      font-size: 20px;
       line-height: 1;
-      vertical-align: text-top;
+      vertical-align: -1px;
     }
   }
 }
