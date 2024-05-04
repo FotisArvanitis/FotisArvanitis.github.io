@@ -100,30 +100,44 @@
           </button>
           <!-- Menu -->
           <div class="navbar-menu">
-            <ul>
+            <!-- Tabs -->
+            <ul class="tabs">
               <!-- About button -->
               <li>
-                <button type="button" class="btn" data-target="#about-tab">
+                <button
+                  type="button"
+                  class="btn tab-btn"
+                  data-toggle="tab"
+                  data-target="#about-tab"
+                >
                   About
                 </button>
               </li>
               <!-- Work button -->
               <li>
-                <button type="button" class="btn" data-target="#work-tab">
+                <button
+                  type="button"
+                  class="btn tab-btn"
+                  data-toggle="tab"
+                  data-target="#work-tab"
+                >
                   Work
                 </button>
               </li>
               <!-- Contact button -->
               <li>
-                <button type="button" class="btn" data-target="#contact-tab">
+                <button
+                  type="button"
+                  class="btn tab-btn"
+                  data-toggle="tab"
+                  data-target="#contact-tab"
+                >
                   Contact
                 </button>
               </li>
-              <!-- Close menu button -->
-              <li>
-                <button type="button" class="btn btn-close">Close</button>
-              </li>
             </ul>
+            <!-- Close menu button -->
+            <button type="button" class="btn btn-close">Close</button>
           </div>
         </nav>
       </div>
@@ -162,253 +176,258 @@
         <div class="greeting">
           <p>Hello!</p>
         </div>
-        <!-- About -->
-        <div class="tab-panel about" id="about-tab">
-          <!-- Heading -->
-          <div class="mb-40">
-            <h1>
-              I'm Fotis Arvanitis, <br />
-              a passionate UI & UX designer.
-            </h1>
+        <!-- Tab content -->
+        <div class="tab-content">
+          <!-- About tab panel -->
+          <div class="tab-panel about" id="about-tab">
+            <!-- Heading -->
+            <div class="mb-40">
+              <h1>
+                I'm Fotis Arvanitis, <br />
+                a passionate UI & UX designer.
+              </h1>
+            </div>
+            <!-- Paragraph -->
+            <div>
+              <p>
+                My purpose is to focus at the heart of every project, collecting
+                all the characteristics, elements and needs for creating visual
+                designs thats suits and perform its purpose. Always designing in
+                a user and developer friendly direction.
+              </p>
+            </div>
           </div>
-          <!-- Paragraph -->
-          <div>
-            <p>
-              My purpose is to focus at the heart of every project, collecting
-              all the characteristics, elements and needs for creating visual
-              designs thats suits and perform its purpose. Always designing in a
-              user and developer friendly direction.
-            </p>
-          </div>
-        </div>
-        <!-- Work -->
-        <div class="tab-panel" id="work-tab">
-          <!-- Slider main container -->
-          <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <!-- Image -->
-                <div class="project-image">
-                  <img
-                    src="./src/assets/images/crossfit-project-img.jpg"
-                    alt="crossfit-project-image"
-                    data-tilt
-                  />
+          <!-- Work tab panel -->
+          <div class="tab-panel" id="work-tab">
+            <!-- Slider main container -->
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <!-- Image -->
+                  <div class="project-image">
+                    <img
+                      src="./src/assets/images/crossfit-project-img.jpg"
+                      alt="crossfit-project-image"
+                      data-tilt
+                    />
+                  </div>
+                  <!-- Description -->
+                  <div class="description">
+                    <!-- Project type -->
+                    <div>
+                      <small class="project-type">Personal project</small>
+                    </div>
+                    <!-- Project title -->
+                    <div>
+                      <h2 class="project-title">CrossFit training center</h2>
+                    </div>
+                    <!-- Project commentary -->
+                    <div>
+                      <p class="project-commentary">
+                        A website from my personal collection of projects,
+                        related to the online presence of a crossfit gym.
+                        Created for practice and improvement in design and
+                        programming.
+                      </p>
+                    </div>
+                    <!-- Process -->
+                    <ul>
+                      <li><div>Research</div></li>
+                      <li><div>UI / UX design</div></li>
+                      <li><div>Logo design</div></li>
+                      <li><div>Illustrations</div></li>
+                      <li><div>Photo editing</div></li>
+                      <li><div>Development</div></li>
+                    </ul>
+                    <!-- Project Link -->
+                    <div>
+                      <a
+                        href="/crossfit-training-center"
+                        target="_blank"
+                        class="btn btn-primary"
+                        ><span>View</span></a
+                      >
+                    </div>
+                  </div>
                 </div>
-                <!-- Description -->
-                <div class="description">
-                  <!-- Project type -->
-                  <div>
-                    <small class="project-type">Personal project</small>
+                <div class="swiper-slide">
+                  <!-- Image -->
+                  <div class="project-image">
+                    <img
+                      src="./src/assets/images/detecto-project-img.jpg"
+                      alt="detecto-project-image"
+                      data-tilt
+                    />
                   </div>
-                  <!-- Project title -->
-                  <div>
-                    <h2 class="project-title">CrossFit training center</h2>
+                  <!-- Description -->
+                  <div class="description">
+                    <!-- Project type -->
+                    <div>
+                      <small class="project-type">Commercial project</small>
+                    </div>
+                    <!-- Project title -->
+                    <div>
+                      <h2 class="project-title">Detecto</h2>
+                    </div>
+                    <!-- Project commentary -->
+                    <div class="mb-20">
+                      <p class="project-commentary">
+                        A landing page created for a new company that offers
+                        financial services. The goal in this case was to create
+                        a clean, modern design for product presentation and
+                        promotion.
+                      </p>
+                    </div>
+                    <!-- Second project commentary -->
+                    <div>
+                      <p class="project-commentary fw-semibold">
+                        * Company information such as brand logo and texts have
+                        been replaced.
+                      </p>
+                    </div>
+                    <!-- Process -->
+                    <ul>
+                      <li><div>Research</div></li>
+                      <li><div>UI / UX design</div></li>
+                      <li><div>Logo design</div></li>
+                      <li><div>Illustrations</div></li>
+                      <li><div>Development</div></li>
+                    </ul>
+                    <!-- Project Link -->
+                    <div>
+                      <a href="/detecto" target="_blank" class="btn btn-primary"
+                        ><span>View</span></a
+                      >
+                    </div>
                   </div>
-                  <!-- Project commentary -->
-                  <div>
-                    <p class="project-commentary">
-                      A website from my personal collection of projects, related
-                      to the online presence of a crossfit gym. Created for
-                      practice and improvement in design and programming.
-                    </p>
+                </div>
+                <div class="swiper-slide">
+                  <!-- Image -->
+                  <div class="project-image">
+                    <img
+                      src="./src/assets/images/macramfrenia-project-img.jpg"
+                      alt="macramfrenia-project-image"
+                      data-tilt
+                    />
                   </div>
-                  <!-- Process -->
-                  <ul>
-                    <li><div>Research</div></li>
-                    <li><div>UI / UX design</div></li>
-                    <li><div>Logo design</div></li>
-                    <li><div>Illustrations</div></li>
-                    <li><div>Photo editing</div></li>
-                    <li><div>Development</div></li>
-                  </ul>
-                  <!-- Project Link -->
-                  <div>
-                    <a
-                      href="/crossfit-training-center"
-                      target="_blank"
-                      class="btn btn-primary"
-                      ><span>View</span></a
-                    >
+                  <!-- Description -->
+                  <div class="description">
+                    <!-- Project type -->
+                    <div>
+                      <small class="project-type">Commercial project</small>
+                    </div>
+                    <!-- Project title -->
+                    <div>
+                      <h2 class="project-title">Macram&shy;frenia</h2>
+                    </div>
+                    <!-- Project commentary -->
+                    <div>
+                      <p class="project-commentary">
+                        The concept behind Macramfrenia was to create the entire
+                        brand from scratch. First the brand needed a logo and
+                        then an online catalog to showcase the jewelry. All in
+                        ethnic style.
+                      </p>
+                    </div>
+                    <!-- Process -->
+                    <ul>
+                      <li><div>Research</div></li>
+                      <li><div>UI / UX design</div></li>
+                      <li><div>Logo design</div></li>
+                      <li><div>Illustrations</div></li>
+                      <li><div>Photo editing</div></li>
+                      <li><div>Development</div></li>
+                    </ul>
+                    <!-- Project Link -->
+                    <div>
+                      <a
+                        href="https://macramfrenia.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-primary"
+                        ><span>View</span></a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <!-- Image -->
-                <div class="project-image">
-                  <img
-                    src="./src/assets/images/detecto-project-img.jpg"
-                    alt="detecto-project-image"
-                    data-tilt
-                  />
+              <!-- Slider navigation buttons -->
+              <div class="swiper-button-next">
+                <div>
+                  <span>n</span>
+                  <span>e</span>
+                  <span>x</span>
+                  <span>t</span>
                 </div>
-                <!-- Description -->
-                <div class="description">
-                  <!-- Project type -->
-                  <div>
-                    <small class="project-type">Commercial project</small>
-                  </div>
-                  <!-- Project title -->
-                  <div>
-                    <h2 class="project-title">Detecto</h2>
-                  </div>
-                  <!-- Project commentary -->
-                  <div class="mb-20">
-                    <p class="project-commentary">
-                      A landing page created for a new company that offers
-                      financial services. The goal in this case was to create a
-                      clean, modern design for product presentation and
-                      promotion.
-                    </p>
-                  </div>
-                  <!-- Second project commentary -->
-                  <div>
-                    <p class="project-commentary fw-semibold">
-                      * Company information such as brand logo and texts have
-                      been replaced.
-                    </p>
-                  </div>
-                  <!-- Process -->
-                  <ul>
-                    <li><div>Research</div></li>
-                    <li><div>UI / UX design</div></li>
-                    <li><div>Logo design</div></li>
-                    <li><div>Illustrations</div></li>
-                    <li><div>Development</div></li>
-                  </ul>
-                  <!-- Project Link -->
-                  <div>
-                    <a href="/detecto" target="_blank" class="btn btn-primary"
-                      ><span>View</span></a
-                    >
-                  </div>
+                <div>
+                  <span>n</span>
+                  <span>e</span>
+                  <span>x</span>
+                  <span>t</span>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <!-- Image -->
-                <div class="project-image">
-                  <img
-                    src="./src/assets/images/macramfrenia-project-img.jpg"
-                    alt="macramfrenia-project-image"
-                    data-tilt
-                  />
+              <div class="swiper-button-prev">
+                <div>
+                  <span>p</span>
+                  <span>r</span>
+                  <span>e</span>
+                  <span>v</span>
+                  <span>i</span>
+                  <span>o</span>
+                  <span>u</span>
+                  <span>s</span>
                 </div>
-                <!-- Description -->
-                <div class="description">
-                  <!-- Project type -->
-                  <div>
-                    <small class="project-type">Commercial project</small>
-                  </div>
-                  <!-- Project title -->
-                  <div>
-                    <h2 class="project-title">Macram&shy;frenia</h2>
-                  </div>
-                  <!-- Project commentary -->
-                  <div>
-                    <p class="project-commentary">
-                      The concept behind Macramfrenia was to create the entire
-                      brand from scratch. First the brand needed a logo and then
-                      an online catalog to showcase the jewelry. All in ethnic
-                      style.
-                    </p>
-                  </div>
-                  <!-- Process -->
-                  <ul>
-                    <li><div>Research</div></li>
-                    <li><div>UI / UX design</div></li>
-                    <li><div>Logo design</div></li>
-                    <li><div>Illustrations</div></li>
-                    <li><div>Photo editing</div></li>
-                    <li><div>Development</div></li>
-                  </ul>
-                  <!-- Project Link -->
-                  <div>
-                    <a
-                      href="https://macramfrenia.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="btn btn-primary"
-                      ><span>View</span></a
-                    >
-                  </div>
+                <div>
+                  <span>p</span>
+                  <span>r</span>
+                  <span>e</span>
+                  <span>v</span>
+                  <span>i</span>
+                  <span>o</span>
+                  <span>u</span>
+                  <span>s</span>
                 </div>
               </div>
             </div>
-            <!-- Slider navigation buttons -->
-            <div class="swiper-button-next">
-              <div>
-                <span>n</span>
-                <span>e</span>
-                <span>x</span>
-                <span>t</span>
-              </div>
-              <div>
-                <span>n</span>
-                <span>e</span>
-                <span>x</span>
-                <span>t</span>
-              </div>
+          </div>
+          <!-- Contact tab panel -->
+          <div class="tab-panel contact" id="contact-tab">
+            <!-- Heading -->
+            <div class="mb-40">
+              <h2>Contact</h2>
             </div>
-            <div class="swiper-button-prev">
-              <div>
-                <span>p</span>
-                <span>r</span>
-                <span>e</span>
-                <span>v</span>
-                <span>i</span>
-                <span>o</span>
-                <span>u</span>
-                <span>s</span>
-              </div>
-              <div>
-                <span>p</span>
-                <span>r</span>
-                <span>e</span>
-                <span>v</span>
-                <span>i</span>
-                <span>o</span>
-                <span>u</span>
-                <span>s</span>
-              </div>
+            <!-- Paragraphs -->
+            <div>
+              <p>Feel free to connect with me.</p>
             </div>
-          </div>
-        </div>
-        <!-- Contact -->
-        <div class="tab-panel contact" id="contact-tab">
-          <!-- Heading -->
-          <div class="mb-40">
-            <h2>Contact</h2>
-          </div>
-          <!-- Paragraphs -->
-          <div>
-            <p>Feel free to connect with me.</p>
-          </div>
-          <div>
-            <p>
-              I'm open to new job opportunities for freelance or contract work.
-            </p>
-          </div>
-          <div>
-            <p>You can get in touch with me via email or LinkedIn.</p>
-          </div>
-          <div class="mb-40">
-            <p>I'd be happy to hear from you!</p>
-          </div>
-          <!-- Links -->
-          <div class="mb-20">
-            <a href="mailto:arvanitis.fotios@gmail.com"
-              >arvanitis.fotios@gmail.com</a
-            >
-          </div>
-          <div>
-            <a
-              href="https://www.linkedin.com/in/fotis-arvanitis-3b9035183"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LinkedIn</a
-            >
+            <div>
+              <p>
+                I'm open to new job opportunities for freelance or contract
+                work.
+              </p>
+            </div>
+            <div>
+              <p>You can get in touch with me via email or LinkedIn.</p>
+            </div>
+            <div class="mb-40">
+              <p>I'd be happy to hear from you!</p>
+            </div>
+            <!-- Links -->
+            <div class="mb-20">
+              <a href="mailto:arvanitis.fotios@gmail.com"
+                >arvanitis.fotios@gmail.com</a
+              >
+            </div>
+            <div>
+              <a
+                href="https://www.linkedin.com/in/fotis-arvanitis-3b9035183"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </div>
           </div>
         </div>
       </div>

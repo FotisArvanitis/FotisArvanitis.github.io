@@ -500,25 +500,14 @@ header .container nav {
   right: 0;
   visibility: visible;
 }
-.nav-bar .navbar-menu ul {
-  margin-block: 0;
-  padding-left: 0;
-  list-style: none;
-}
-.nav-bar .navbar-menu button {
-  padding: 0;
-  line-height: 1;
-}
-.nav-bar .navbar-menu button.active {
-  font-weight: 700;
-}
 @media (max-width: 575px) {
   .nav-bar .navbar-menu {
     position: fixed;
     top: 0;
     right: calc(100% * -1);
     display: grid;
-    place-items: center;
+    align-content: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
     background-color: white;
@@ -527,35 +516,49 @@ header .container nav {
     visibility: hidden;
     transition: right 600ms ease-out, visibility 600ms ease-out;
   }
-  .nav-bar .navbar-menu li + li:not(:has(.btn-close)) {
-    margin-top: 14px;
-  }
-  .nav-bar .navbar-menu button {
-    font-size: 1.938rem;
-  }
-  .nav-bar .navbar-menu button.btn-close {
-    margin-top: 40px;
-    font-size: 1.125rem;
-  }
-  .nav-bar .navbar-menu button.btn-close::before {
-    content: "";
-    display: block;
-    position: relative;
-    top: -20px;
-    width: 112px;
-    height: 1px;
-    background-color: black;
-  }
+}
+.nav-bar .navbar-menu .btn-close {
+  margin-top: 40px;
+  padding: 0;
+  font-size: 1.125rem;
+}
+.nav-bar .navbar-menu .btn-close::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: -20px;
+  width: 112px;
+  height: 1px;
+  background-color: black;
 }
 @media (min-width: 576px) {
-  .nav-bar .navbar-menu ul {
-    display: flex;
-    gap: 20px;
-  }
-  .nav-bar .navbar-menu li:has(.btn-close) {
+  .nav-bar .navbar-menu .btn-close {
     display: none;
   }
-  .nav-bar .navbar-menu button {
+}
+
+.tabs {
+  margin-block: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 575px) {
+  .tabs {
+    flex-direction: column;
+  }
+}
+.tabs .tab-btn {
+  padding: 0;
+  font-size: 1.938rem;
+  line-height: 1;
+}
+.tabs .tab-btn.active {
+  font-weight: 700;
+}
+@media (min-width: 576px) {
+  .tabs .tab-btn {
     font-size: 1.125rem;
   }
 }

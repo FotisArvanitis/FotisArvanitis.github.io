@@ -1,0 +1,59 @@
+// -----------------------------------------------------------------------------
+// This file contains all the styles related to the tabs.
+// -----------------------------------------------------------------------------
+
+@use "../utilities" as *;
+
+// Tabs
+// ==========================================================================
+
+.tabs {
+  @include reset-list;
+  display: flex;
+  gap: 20px;
+
+  // Rules until small screens sizes.
+
+  @media (max-width: $until-small) {
+    flex-direction: column;
+  }
+
+  // Tab buttons
+  // ==========================================================================
+
+  .tab-btn {
+    padding: 0;
+    font-size: 1.938rem;
+    line-height: 1;
+
+    // Active.
+
+    &.active {
+      font-weight: 700;
+    }
+
+    // Rules for small screens and up.
+
+    @media (min-width: $small) {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+// Tab panels
+// ==========================================================================
+
+.tab-panel {
+  // Not active.
+
+  &:not(.active) {
+    display: none;
+  }
+
+  // Hide.
+
+  &.hide {
+    opacity: 0;
+    transition: opacity 400ms ease-out;
+  }
+}

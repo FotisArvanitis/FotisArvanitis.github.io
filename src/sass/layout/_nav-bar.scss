@@ -63,23 +63,6 @@
       visibility: visible;
     }
 
-    // Unordered list.
-
-    ul {
-      @include reset-list;
-    }
-
-    // Button.
-
-    button {
-      padding: 0;
-      line-height: 1;
-
-      &.active {
-        font-weight: 700;
-      }
-    }
-
     // Rules until small screens sizes.
 
     @media (max-width: $until-small) {
@@ -87,7 +70,8 @@
       top: 0;
       right: calc(100% * -1);
       display: grid;
-      place-items: center;
+      align-content: center;
+      justify-content: center;
       width: 100%;
       height: 100%;
       background-color: $white;
@@ -95,59 +79,32 @@
       z-index: $zindex-offcanvas;
       visibility: hidden;
       transition: right 600ms ease-out, visibility 600ms ease-out;
-
-      // List.
-
-      li {
-        + li:not(:has(.btn-close)) {
-          margin-top: 14px;
-        }
-      }
-
-      // Button.
-
-      button {
-        font-size: 1.938rem;
-
-        // Close menu button.
-
-        &.btn-close {
-          margin-top: 40px;
-          font-size: 1.125rem;
-
-          &::before {
-            content: "";
-            display: block;
-            position: relative;
-            top: -20px;
-            width: 112px;
-            height: 1px;
-            background-color: $black;
-          }
-        }
-      }
     }
 
-    // Rules for small screens and up.
+    // Close menu button.
+    // ==========================================================================
 
-    @media (min-width: $small) {
-      // List.
+    .btn-close {
+      margin-top: 40px;
+      padding: 0;
+      font-size: 1.125rem;
 
-      ul {
-        display: flex;
-        gap: 20px;
+      // Before.
+
+      &::before {
+        content: "";
+        display: block;
+        position: relative;
+        top: -20px;
+        width: 112px;
+        height: 1px;
+        background-color: $black;
       }
 
-      // List item.
+      // Rules for small screens and up.
 
-      li:has(.btn-close) {
+      @media (min-width: $small) {
         display: none;
-      }
-
-      // Button.
-
-      button {
-        font-size: 1.125rem;
       }
     }
   }
