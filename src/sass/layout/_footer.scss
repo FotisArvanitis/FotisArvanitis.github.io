@@ -20,7 +20,7 @@ footer {
 
   p {
     padding-bottom: 10px;
-    animation-name: slideUp;
+    animation-name: slide-up;
     @include animation-std-style(backwards);
 
     // First letter

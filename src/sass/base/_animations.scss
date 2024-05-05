@@ -7,7 +7,7 @@
 
 // Used by texts.
 
-@keyframes slideUp {
+@keyframes slide-up {
   from {
     transform: translateY(100%);
   }
@@ -22,7 +22,7 @@
 
 // Used by "greeting".
 
-@keyframes slideUpOut {
+@keyframes slide-up-out {
   from {
     transform: translateY(0%);
   }
@@ -37,7 +37,7 @@
 
 // Used by project links.
 
-@keyframes slideLeft {
+@keyframes slide-left {
   from {
     transform: translateX(100%);
   }
@@ -53,7 +53,7 @@
 // Used by prelude.
 // Used by header nav.
 
-@keyframes slideDown {
+@keyframes slide-down {
   from {
     transform: translateY(-100%);
   }
@@ -68,7 +68,7 @@
 
 // Used by prelude.
 
-@keyframes slideDownOut {
+@keyframes slide-down-out {
   from {
     transform: translateY(0%);
   }
@@ -78,18 +78,17 @@
   }
 }
 
-// Scaling with rotation
+// Fade out
 // ==========================================================================
 
-// Used by project images.
+// Used by tab panel "hide" class.
 
-@keyframes scalingWithRotation {
+@keyframes fade-out {
   from {
-    transform: scale(0) rotate(-90deg);
+    opacity: 1;
   }
-
   to {
-    transform: scale(1) rotate(0deg);
+    opacity: 0;
   }
 }
 
@@ -98,7 +97,7 @@
 
 // Used by the underline of "contact" heading.
 
-@keyframes zeroToFullWidth {
+@keyframes zero-to-full-width {
   from {
     width: 0;
   }
@@ -111,7 +110,7 @@
 // Prelude Animations
 // ==========================================================================
 
-@keyframes preludeAnimation {
+@keyframes prelude-animation {
   from {
     transform: translateY(-120px) rotateY(360deg) scale(0);
   }
@@ -121,10 +120,23 @@
   }
 }
 
-// Swiper buttons
+// Project image animation
 // ==========================================================================
 
-@keyframes swiperBtnsAnimation {
+@keyframes project-image-animation {
+  from {
+    transform: scale(0) rotate(-90deg);
+  }
+
+  to {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+// Swiper button animation
+// ==========================================================================
+
+@keyframes swiper-button-animation {
   from {
     right: 40px;
     letter-spacing: 20px;

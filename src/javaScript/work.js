@@ -2,139 +2,128 @@
 // This file contains scripts for the work tab-panel.
 // -----------------------------------------------------------------------------
 
-// Add animation-delay to work panel description texts, with increased
-// delay-time for each item.
-// ==========================================================================
+function workJS() {
+  const swiperBtns = document.querySelectorAll("div[class^='swiper-button']");
 
-function descriptionTextsDelay() {
-  // Select elements and create arrays with them.
+  // Initialize Swiper.
+  // ==========================================================================
 
-  const projectType = Array.from(
-    document.querySelectorAll(
-      ".swiper-slide-active .description div .project-type"
-    )
-  );
+  const swiper = new Swiper(".swiper", {
+    // Parameters.
+    allowTouchMove: false,
+    autoHeight: true,
+    loop: true,
+    speed: 400,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
 
-  const projectTitle = Array.from(
-    document.querySelectorAll(
-      ".swiper-slide-active .description div .project-title"
-    )
-  );
+    // Navigation buttons.
 
-  const projectCommentary = Array.from(
-    document.querySelectorAll(
-      ".swiper-slide-active .description div .project-commentary"
-    )
-  );
-
-  const listItems = Array.from(
-    document.querySelectorAll(".swiper-slide-active .description ul li div")
-  );
-
-  const projectsLinks = Array.from(
-    document.querySelectorAll(".swiper-slide-active .description div a")
-  );
-
-  const swiperBtns = Array.from(
-    document.querySelectorAll(".swiper > div[class^='swiper-button']")
-  );
-
-  // Concatenate the arrays.
-
-  const mergedArray = projectType.concat(
-    projectTitle,
-    projectCommentary,
-    listItems,
-    projectsLinks,
-    swiperBtns
-  );
-
-  // Add animation-delay to each element, with increased
-  // delay-time for each element based on its index number.
-
-  mergedArray.forEach((el, index) => {
-    el.style.animationDelay = index / 10 + 1 + "s";
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
-}
 
-// Swiper buttons.
-// ==========================================================================
+  // Add animation-delay to work panel description texts.
+  // ==========================================================================
 
-// Add animation-name.
+  function descriptionTextsDelay() {
+    // Select elements and create arrays with them.
 
-function swiperBtnsAddAnimName() {
-  const swiperBtns = document.querySelectorAll(
-    ".swiper > div[class^='swiper-button']"
-  );
+    const projectType = [
+      document.querySelector(
+        ".swiper-slide-active .description div .project-type"
+      ),
+    ];
 
-  swiperBtns.forEach((el) => {
-    el.style.animationName = "swiperBtnsAnimation";
+    const projectTitle = [
+      document.querySelector(
+        ".swiper-slide-active .description div .project-title"
+      ),
+    ];
+
+    const projectCommentary = Array.from(
+      document.querySelectorAll(
+        ".swiper-slide-active .description div .project-commentary"
+      )
+    );
+
+    const listItems = Array.from(
+      document.querySelectorAll(".swiper-slide-active .description ul li div")
+    );
+
+    const projectsLinks = Array.from(
+      document.querySelectorAll(".swiper-slide-active .description div a")
+    );
+
+    const swiperButtons = Array.from(swiperBtns);
+
+    // Concatenate the arrays.
+
+    const mergedArray = projectType.concat(
+      projectTitle,
+      projectCommentary,
+      listItems,
+      projectsLinks,
+      swiperButtons
+    );
+
+    // Add animation-delay to each element, with increased
+    // delay-time for each element based on its index number.
+
+    mergedArray.forEach((el, index) => {
+      el.style.animationDelay = index / 10 + 1 + "s";
+    });
+  }
+
+  // Swiper buttons.
+  // ==========================================================================
+
+  // Define a function that scrolls to top.
+
+  function scrollTop() {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  }
+
+  // Define a function that hides swiper buttons.
+
+  function hideButton() {
+    swiperBtns.forEach((button) => {
+      button.classList.remove("show");
+      button.classList.add("hide");
+    });
+  }
+
+  // Add a "click" event listener to the swiper buttons.
+
+  swiperBtns.forEach((button) => {
+    button.addEventListener("click", () => {
+      hideButton();
+      scrollTop();
+    });
   });
-}
 
-// On click event.
+  // Event will be fired everytime when swiper starts animation.
 
-function swiperBtnsRemoveAnimStyles() {
-  const swiperBtns = document.querySelectorAll(
-    ".swiper > div[class^='swiper-button']"
-  );
+  swiper.on("setTransition", () => {
+    descriptionTextsDelay();
 
-  swiperBtns.forEach((el) => {
-    el.addEventListener("click", () => {
-      swiperBtns.forEach((el) => {
-        // Set opacity to zero and remove animation-name.
+    swiperBtns.forEach((button) => {
+      button.classList.add("show");
 
-        el.style.opacity = "0";
-        el.style.removeProperty("animation-name");
-
-        // Scroll to top, if the distance from the top of the document is > 0px.
-
-        if (
-          document.body.scrollTop > 0 ||
-          document.documentElement.scrollTop > 0
-        ) {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        }
-      });
+      if (button.classList.contains("hide")) {
+        button.classList.remove("hide");
+      }
     });
   });
 }
 
-// Initialize Swiper.
-// ==========================================================================
+document.addEventListener("DOMContentLoaded", workJS);
 
-const swiper = new Swiper(".swiper", {
-  // Parameters.
-  allowTouchMove: false,
-  autoHeight: true,
-  loop: true,
-  speed: 400,
-  effect: "fade",
-  fadeEffect: {
-    crossFade: true,
-  },
-
-  // Navigation buttons.
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-swiperBtnsRemoveAnimStyles();
-
-// Event will be fired everytime when swiper starts animation.
-
-swiper.on("setTransition", () => {
-  descriptionTextsDelay();
-  swiperBtnsAddAnimName();
-});
-
-export {
-  descriptionTextsDelay,
-  swiperBtnsAddAnimName,
-  swiperBtnsRemoveAnimStyles,
-  swiper,
-};
+export { workJS };

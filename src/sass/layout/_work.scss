@@ -28,11 +28,8 @@
   }
 
   // Active slide.
-  // 1. For smoother transitions between slides.
 
   &-active {
-    transition-delay: 400ms; // 1
-
     // Add animation to texts.
 
     .description {
@@ -40,15 +37,17 @@
       .project-title,
       .project-commentary,
       ul li div {
-        animation-name: slideUp;
+        animation-name: slide-up;
         @include animation-std-style(backwards);
+        animation-delay: 400ms;
       }
 
       // Add animation to links.
 
       > div > a {
-        animation-name: slideLeft;
+        animation-name: slide-left;
         @include animation-std-style(backwards);
+        animation-delay: 400ms;
       }
     }
   }
@@ -76,8 +75,9 @@
 
   &-active {
     .project-image img {
-      animation-name: scalingWithRotation;
+      animation-name: project-image-animation;
       @include animation-std-style(backwards);
+      animation-delay: 400ms;
     }
   }
 }

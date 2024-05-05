@@ -8,34 +8,44 @@ function navTabs() {
   // Define a function that shows the tab.
 
   function showTab(event) {
-    // Check if the targeted tab button does not have the "active" class.
+    const activeTabPanel = document.querySelector(
+      ".tab-content .tab-panel.active"
+    );
 
-    if (!event.currentTarget.classList.contains("active")) {
+    // Check if the targeted tab button does not have the "active" class,
+    // and the active tab panel does not have the "hide" class.
+
+    if (
+      !event.currentTarget.classList.contains("active") &&
+      !activeTabPanel.classList.contains("hide")
+    ) {
       const activeTabBtn = document.querySelector(".tabs button.active");
-      const activeTabPanel = document.querySelector(
-        ".tab-content .tab-panel.active"
-      );
       const targetedBtnDataTarget =
         event.currentTarget.getAttribute("data-target");
-      const newTabPanel = document.querySelector(targetedBtnDataTarget);
+      const targetedBtnTabPanel = document.querySelector(targetedBtnDataTarget);
 
-      // Remove the "active" class from the active tab button.
-      activeTabBtn.classList.remove("active");
       // Add the "hide" class to the active tab panel.
       activeTabPanel.classList.add("hide");
+      // Remove the "active" class from the active tab button.
+      activeTabBtn.classList.remove("active");
       // Add the "active" class to the targeted tab button.
       event.currentTarget.classList.add("active");
 
-      // Add a "transition end" event listener to the active tab panel.
+      // Add an "animation end" event listener to the active tab panel.
 
-      activeTabPanel.ontransitionend = () => {
-        // Remove the "active" class from the active tab panel.
-        activeTabPanel.classList.remove("active");
-        // Remove the "hide" class from the active tab panel.
-        activeTabPanel.classList.remove("hide");
-        // Add the "active" class to the new tab panel.
-        newTabPanel.classList.add("active");
-      };
+      activeTabPanel.addEventListener(
+        "animationend",
+        () => {
+          // Remove the "active" class from the active tab panel.
+          activeTabPanel.classList.remove("active");
+          // Remove the "hide" class from the active tab panel.
+          activeTabPanel.classList.remove("hide");
+          // Add the "active" class to the targeted button tab panel.
+          targetedBtnTabPanel.classList.add("active");
+        },
+        // Remove the "animation end" event listener when invoked.
+        { once: true }
+      );
     }
   }
 

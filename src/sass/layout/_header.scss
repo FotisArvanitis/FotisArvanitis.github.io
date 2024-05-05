@@ -18,7 +18,7 @@ header {
     // Nav tag.
 
     nav {
-      animation-name: slideDown;
+      animation-name: slide-down;
       @include animation-std-style(backwards);
     }
   }

@@ -37,7 +37,7 @@
       // Span.
 
       span {
-        animation-name: preludeAnimation, slideDownOut;
+        animation-name: prelude-animation, slide-down-out;
         animation-duration: 1.2s;
         animation-timing-function: ease-out;
         animation-fill-mode: backwards, forwards;
@@ -107,7 +107,7 @@
       p {
         font-size: 1.125rem;
         text-transform: uppercase;
-        animation-name: slideDown, slideDownOut;
+        animation-name: slide-down, slide-down-out;
         animation-duration: 1.2s;
         animation-timing-function: ease-out;
         animation-delay: 2.4s, 4.4s;
@@ -136,7 +136,7 @@
     font-size: 3.062rem;
     font-weight: 700;
     text-transform: uppercase;
-    animation-name: slideUp, slideUpOut;
+    animation-name: slide-up, slide-up-out;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-delay: 0s, 2s;

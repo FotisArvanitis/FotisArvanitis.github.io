@@ -18,7 +18,7 @@
 
   h1 {
     max-width: 600px;
-    animation-name: slideUp;
+    animation-name: slide-up;
     @include animation-std-style(backwards);
 
     // Rules until large screen sizes.
@@ -32,7 +32,7 @@
 
   p {
     max-width: 500px;
-    animation-name: slideUp;
+    animation-name: slide-up;
     @include animation-std-style(backwards);
     animation-delay: 1s;
   }
