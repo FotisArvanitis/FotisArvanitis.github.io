@@ -557,16 +557,16 @@ header .container nav {
     flex-direction: column;
   }
 }
-.tabs .tab-btn {
+.tabs .tab-header {
   padding: 0;
   font-size: 1.938rem;
   line-height: 1;
 }
-.tabs .tab-btn.active {
+.tabs .tab-header.active {
   font-weight: 700;
 }
 @media (min-width: 576px) {
-  .tabs .tab-btn {
+  .tabs .tab-header {
     font-size: 1.125rem;
   }
 }

@@ -3,7 +3,9 @@
 // -----------------------------------------------------------------------------
 
 function navTabs() {
-  const tabBtns = document.querySelectorAll(".tabs button[data-toggle='tab']");
+  const tabHeaders = document.querySelectorAll(
+    ".tabs button[data-toggle='tab']"
+  );
 
   // Define a function that shows the tab.
 
@@ -12,23 +14,24 @@ function navTabs() {
       ".tab-content .tab-panel.active"
     );
 
-    // Check if the targeted tab button does not have the "active" class,
+    // Check if the targeted tab header does not have the "active" class,
     // and the active tab panel does not have the "hide" class.
 
     if (
       !event.currentTarget.classList.contains("active") &&
       !activeTabPanel.classList.contains("hide")
     ) {
-      const activeTabBtn = document.querySelector(".tabs button.active");
-      const targetedBtnDataTarget =
-        event.currentTarget.getAttribute("data-target");
-      const targetedBtnTabPanel = document.querySelector(targetedBtnDataTarget);
+      const activeTabHeader = document.querySelector(
+        ".tabs .tab-header.active"
+      );
+      const tabHeaderId = event.currentTarget.getAttribute("data-target");
+      const tabPanel = document.querySelector(tabHeaderId);
 
       // Add the "hide" class to the active tab panel.
       activeTabPanel.classList.add("hide");
-      // Remove the "active" class from the active tab button.
-      activeTabBtn.classList.remove("active");
-      // Add the "active" class to the targeted tab button.
+      // Remove the "active" class from the active tab header.
+      activeTabHeader.classList.remove("active");
+      // Add the "active" class to the targeted tab header.
       event.currentTarget.classList.add("active");
 
       // Add an "animation end" event listener to the active tab panel.
@@ -40,8 +43,8 @@ function navTabs() {
           activeTabPanel.classList.remove("active");
           // Remove the "hide" class from the active tab panel.
           activeTabPanel.classList.remove("hide");
-          // Add the "active" class to the targeted button tab panel.
-          targetedBtnTabPanel.classList.add("active");
+          // Add the "active" class to the targeted header tab panel.
+          tabPanel.classList.add("active");
         },
         // Remove the "animation end" event listener when invoked.
         { once: true }
@@ -49,10 +52,10 @@ function navTabs() {
     }
   }
 
-  // Attach the event handler to each tab button.
+  // Attach the event handler to each tab header.
 
-  tabBtns.forEach((button) => {
-    button.addEventListener("click", showTab);
+  tabHeaders.forEach((element) => {
+    element.addEventListener("click", showTab);
   });
 }
 
