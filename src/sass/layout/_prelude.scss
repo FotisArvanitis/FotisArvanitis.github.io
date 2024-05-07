@@ -19,12 +19,13 @@
   }
 
   // Div.
+  // ==========================================================================
 
   div {
     line-height: 1.2;
 
-    // First and second div.
-    // * First and last name.
+    // First and second div (First and last name).
+    // ==========================================================================
 
     &:first-of-type,
     &:nth-of-type(2) {
@@ -96,7 +97,8 @@
       }
     }
 
-    // Third division ("Portfolio").
+    // Third div ("Portfolio").
+    // ==========================================================================
 
     &:nth-of-type(3) {
       overflow: hidden;

@@ -1,6 +1,4 @@
-var VanillaTilt = (function () {
-  "use strict";
-
+function VanillaTilt() {
   /**
    * Created by Sergiu Șandor (micku7zu) on 1/27/2017.
    * Original idea: https://github.com/gijsroge/tilt.js
@@ -589,8 +587,8 @@ var VanillaTilt = (function () {
       speed: 2000,
     });
   }
+}
 
-  return VanillaTilt;
-})();
+document.addEventListener("DOMContentLoaded", VanillaTilt);
 
 export { VanillaTilt };

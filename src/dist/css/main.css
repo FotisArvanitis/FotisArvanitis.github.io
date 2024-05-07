@@ -695,17 +695,27 @@ header .container nav {
   text-transform: capitalize;
 }
 
+@media (min-width: 768px) {
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .contact > div {
+    grid-column: 2/span 4;
+  }
+}
 .contact > div {
   overflow: hidden;
+}
+.contact > div:has(svg) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .contact h2 {
   position: relative;
   max-width: 600px;
   padding-bottom: 10px;
-  animation-name: slide-up;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: backwards;
 }
 .contact h2::after {
   content: "";
@@ -721,27 +731,19 @@ header .container nav {
   animation-fill-mode: backwards;
   animation-delay: 1s;
 }
-.contact p {
-  animation-name: slide-up;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: backwards;
+.contact svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
 }
+.contact h2,
+.contact p,
+.contact svg,
 .contact a {
-  display: inline-block;
   animation-name: slide-up;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-fill-mode: backwards;
-}
-@media (min-width: 768px) {
-  .contact {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-  }
-  .contact > div {
-    grid-column: 2/span 4;
-  }
 }
 
 footer {
@@ -765,6 +767,10 @@ footer p::first-letter {
 
 .fw-semibold {
   font-weight: 600;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
 }
 
 .mb-20 {
@@ -791,6 +797,7 @@ footer p::first-letter {
   background-color: transparent;
   border: 1px solid transparent;
   padding: 6px 12px;
+  transition: color 400ms ease-out, background-color 400ms ease-out;
 }
 .btn:focus-visible {
   outline: 0;

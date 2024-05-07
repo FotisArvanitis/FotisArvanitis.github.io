@@ -2,11 +2,13 @@
 // This file contains scripts for the footer.
 // -----------------------------------------------------------------------------
 
-// Footer date
+// Add the year to the footer paragraph.
 // ==========================================================================
 
-const year = new Date().getFullYear();
+function year() {
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+}
 
-document.getElementById("year").innerHTML = year;
+document.addEventListener("DOMContentLoaded", year);
 
 export { year };

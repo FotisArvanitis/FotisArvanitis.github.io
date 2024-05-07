@@ -8,20 +8,41 @@
 // ==========================================================================
 
 .contact {
+  // Rules for medium screen sizes and up.
+
+  @media (min-width: $medium) {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    // Div.
+
+    > div {
+      grid-column: 2 / span 4;
+    }
+  }
+
   // Div.
+  // ==========================================================================
 
   > div {
     overflow: hidden;
+
+    // Div containing svg.
+
+    &:has(svg) {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
   }
 
   // Heading.
+  // ==========================================================================
 
   h2 {
     position: relative;
     max-width: 600px;
     padding-bottom: 10px;
-    animation-name: slide-up;
-    @include animation-std-style(backwards);
 
     // After.
 
@@ -39,31 +60,25 @@
     }
   }
 
-  // Paragraph.
+  // Svg
+  // ==========================================================================
 
-  p {
-    animation-name: slide-up;
-    @include animation-std-style(backwards);
+  svg {
+    $size: 28px;
+
+    width: $size;
+    height: $size;
+    fill: currentColor;
   }
 
-  // Link.
+  // Animation
+  // ==========================================================================
 
+  h2,
+  p,
+  svg,
   a {
-    display: inline-block;
     animation-name: slide-up;
     @include animation-std-style(backwards);
-  }
-
-  // Rules for medium screen sizes and up.
-
-  @media (min-width: $medium) {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-
-    // Div.
-
-    > div {
-      grid-column: 2 / span 4;
-    }
   }
 }
