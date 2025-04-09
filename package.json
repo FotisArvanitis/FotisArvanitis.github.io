@@ -1,0 +1,23 @@
+{
+  "name": "fotisarvanitis.github.io",
+  "version": "1.0.0",
+  "description": "To compile SASS to CSS, run this command: npx sass --watch src\\sass\\main.scss:src\\dist\\css\\main.css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FotisArvanitis/FotisArvanitis.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FotisArvanitis/FotisArvanitis.github.io/issues"
+  },
+  "homepage": "https://github.com/FotisArvanitis/FotisArvanitis.github.io#readme",
+  "devDependencies": {
+    "sass": "^1.86.3"
+  }
+}
